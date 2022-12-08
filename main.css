@@ -1,0 +1,26 @@
+
+.div1 {
+    color: #5d3fd3;
+    font-size:1.8rem;
+    margin-top: 0.6rem;
+    margin-bottom:0.6rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  .div2 {
+    color: #5d3fd3;
+    font-size:1.8rem;
+    margin-top: 4rem;
+    margin-bottom:3rem;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  .div3 {
+    color: #5d3fd3;
+    font-size:1.8rem;
+    margin-top: 0.6rem;
+    margin-bottom:0.6rem;
+    font-weight: bold;
+    text-decoration: underline;
+  }
