@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { HospitalBlueIcon, HospitalWhiteIcon } from '../Components/Icons'
+import Cards from "../Components/Cards";
+import Blogs from "../Components/Blogs";
+import Stats from "../Components/Stats";
 function Home() {
 
     const [isShownCard1, setIsShownCard1] = useState(false);
@@ -143,6 +146,12 @@ function Home() {
                 <div className='mt-20 text-center text-primary font-semibold text-[2rem] my-16'>
                     Our Impact
                 </div>
+                <Cards />
+                <div className='mt-20 text-center text-primary font-semibold text-[2rem] my-16'>
+                    Blog Posts
+                </div>
+            <Blogs />
+            <Stats />
             </div>
             
         </div>
