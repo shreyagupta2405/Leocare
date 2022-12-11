@@ -1,10 +1,13 @@
 import React from 'react'
+import img from "./images/news.jpg"
 
 function Footer() {
     return (
         <footer aria-label="Site Footer" class="bg-white">
-            <div class="mx-auto container px-4 pt-16 pb-8 sm:px-6 lg:px-8">
-                <div class="mx-auto max-w-md">
+        <div>
+            <div class="mx-auto container px-8 pt-16 pb-8 sm:px-6 lg:px-8">
+            <div >
+                <div class="mx-auto max-w-md float-left ml-36 mt-12">
                     <strong
                         class="block text-center text-xl font-medium text-gray-900 sm:text-3xl"
                     >
@@ -30,17 +33,24 @@ function Footer() {
                             </button>
                         </div>
                     </form>
+                    </div>
+                    <div className='float-right'>
+                  <img src={img} className='h-96 mr-48'></img>
                 </div>
+                </div>
+                
+                
+            </div>    
 
-                <div class=" mt-16 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-32">
-                    <div class="mx-auto max-w-sm lg:max-w-none">
-                        <p class="mt-4 text-center text-gray-500 lg:text-left lg:text-lg">
+                <div class=" mt-96 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-32">
+                    <div class="mx-auto max-w-sm lg:max-w-none mt-24">
+                        <p class="mt-4 ml-24 text-center text-gray-500 lg:text-left lg:text-lg">
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium
                             natus quod eveniet aut perferendis distinctio iusto repudiandae,
                             provident velit earum?
                         </p>
 
-                        <div class="mt-6 flex justify-center gap-4 lg:justify-start">
+                        <div class="mt-6 ml-24 flex justify-center gap-4 lg:justify-start">
                             <a
                                 class="text-gray-700 transition hover:text-gray-700/75"
                                 href=""
@@ -152,7 +162,7 @@ function Footer() {
                     </div>
 
                     <div
-                        class="grid grid-cols-1 gap-8 text-center lg:grid-cols-3 lg:text-left"
+                        class="mt-24 grid grid-cols-1 gap-8 text-center lg:grid-cols-3 lg:text-left"
                     >
                         <div>
                             <strong class="font-medium text-gray-900"> Services </strong>
