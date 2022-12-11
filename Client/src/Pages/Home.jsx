@@ -140,8 +140,13 @@ function Home() {
                         </div>
                     </div>
                 </div>
+                <div className='mt-20 text-center text-primary font-semibold text-[2rem] my-16'>
+                    Our Impact
+                </div>
             </div>
+            
         </div>
+        
     )
 }
 

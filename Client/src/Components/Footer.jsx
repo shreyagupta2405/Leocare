@@ -32,7 +32,7 @@ function Footer() {
                     </form>
                 </div>
 
-                <div class="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-32">
+                <div class=" mt-16 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-32">
                     <div class="mx-auto max-w-sm lg:max-w-none">
                         <p class="mt-4 text-center text-gray-500 lg:text-left lg:text-lg">
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium

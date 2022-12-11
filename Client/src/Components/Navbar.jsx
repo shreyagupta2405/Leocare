@@ -1,5 +1,6 @@
 import React from 'react'
 import SignUp from '../Pages/SignUp';
+import im from "./images/logo.png"
 
 function Navbar() {
 
@@ -7,8 +8,8 @@ function Navbar() {
         <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
             <div className="container flex flex-wrap items-center justify-between mx-auto">
                 <a href="https://flowbite.com/" className="flex items-center">
-                    <img src="https://flowbite.com/docs/images/logo.svg" className="h-6 mr-3 sm:h-9" alt="Flowbite Logo" />
-                    <h1 className="text-primary text-[2rem]">Leocare</h1>
+                    <img src={im} className="h-12 w-13 mr-2 " alt="Flowbite Logo" />
+                    <h1 className="text-primary font-bold text-[2rem]">Leocare</h1>
                 </a>
                 <button data-collapse-toggle="navbar-default" type="button" className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
                     <span className="sr-only">Open main menu</span>
