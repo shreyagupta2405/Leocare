@@ -4,53 +4,53 @@ import img from "./images/news.jpg"
 function Footer() {
     return (
         <footer aria-label="Site Footer" class="bg-white">
-        <div>
-            <div class="mx-auto container px-8 pt-16 pb-8 sm:px-6 lg:px-8">
-            <div >
-                <div class="mx-auto max-w-md float-left ml-36 mt-12">
-                    <strong
-                        class="block text-center text-xl font-medium text-gray-900 sm:text-3xl"
-                    >
-                        Want us to email you with the latest blockbuster news?
-                    </strong>
-
-                    <form class="mt-6">
-                        <div class="relative max-w-lg">
-                            <label class="sr-only" for="email"> Email </label>
-
-                            <input
-                                class="w-full rounded-full border-gray-200 bg-gray-100 p-4 pr-32 text-sm font-medium"
-                                id="email"
-                                type="email"
-                                placeholder="john@doe.com"
-                            />
-
-                            <button
-                                class="absolute top-1/2 right-1 -translate-y-1/2 rounded-full bg-blue-600 px-5 py-3 text-sm font-medium text-white transition hover:bg-blue-700"
-                                type="button"
+            <div>
+                <div class="mx-auto container px-8 pt-16 pb-8 sm:px-6 lg:px-8">
+                    <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 items-center justify-center">
+                        <div class="mx-auto max-w-md mt-12">
+                            <strong
+                                class="block text-center text-xl font-medium text-gray-900 sm:text-3xl"
                             >
-                                Subscribe
-                            </button>
-                        </div>
-                    </form>
-                    </div>
-                    <div className='float-right'>
-                  <img src={img} className='h-96 mr-48'></img>
-                </div>
-                </div>
-                
-                
-            </div>    
+                                Want us to email you with the latest blockbuster news?
+                            </strong>
 
-                <div class=" mt-96 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-32">
+                            <form class="mt-6">
+                                <div class="relative max-w-lg">
+                                    <label class="sr-only" for="email"> Email </label>
+
+                                    <input
+                                        class="w-full rounded-full border-gray-200 bg-gray-100 p-4 pr-32 text-sm font-medium"
+                                        id="email"
+                                        type="email"
+                                        placeholder="john@doe.com"
+                                    />
+
+                                    <button
+                                        class="absolute top-1/2 right-1 -translate-y-1/2 rounded-full bg-blue-600 px-5 py-3 text-sm font-medium text-white transition hover:bg-blue-700"
+                                        type="button"
+                                    >
+                                        Subscribe
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="justify-center justify-self-center  bg-slate-900 text-white text-center text-lg">
+                            <img src={img} className='h-96'></img>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class=" mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-32">
                     <div class="mx-auto max-w-sm lg:max-w-none mt-24">
-                        <p class="mt-4 ml-24 text-center text-gray-500 lg:text-left lg:text-lg">
+                        <p class="mt-4 lg:ml-24 text-center text-gray-500 lg:text-left lg:text-lg">
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium
                             natus quod eveniet aut perferendis distinctio iusto repudiandae,
                             provident velit earum?
                         </p>
 
-                        <div class="mt-6 ml-24 flex justify-center gap-4 lg:justify-start">
+                        <div class="mt-6 lg:ml-24 flex justify-center gap-4 lg:justify-start">
                             <a
                                 class="text-gray-700 transition hover:text-gray-700/75"
                                 href=""

@@ -3,23 +3,36 @@ import Card from './Card'
 
 function Cards() {
   return (
-    <div className='flex mb-24 grid-cols-3 gap-5 md:grid-cols-2 sm:grid-cols-1'>
-            <Card 
-              title='Environment'
-              imageUrl='https://picsum.photos/id/54/400/300'
-              body='Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-            />
-            <Card
-              title='Environment'
-              imageUrl='https://picsum.photos/id/54/400/300'
-              body='Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-            />
-            <Card
-              title='Environment'
-              imageUrl='https://picsum.photos/id/54/400/300'
-              body='Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-            />
-            </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 ">
+      <div className='justify-center items-center flex'>
+        <Card
+          title='Environment'
+          imageUrl='https://picsum.photos/id/54/400/300'
+          body='Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+        />
+      </div>
+      <div className='justify-center items-center flex'>
+        <Card
+          title='Environment'
+          imageUrl='https://picsum.photos/id/54/400/300'
+          body='Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+        />
+      </div>
+      <div className='justify-center items-center flex'>
+        <Card
+          title='Environment'
+          imageUrl='https://picsum.photos/id/54/400/300'
+          body='Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+        />
+      </div>
+      <div className='justify-center items-center flex'>
+        <Card
+          title='Environment'
+          imageUrl='https://picsum.photos/id/54/400/300'
+          body='Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+        />
+      </div>
+    </div>
   )
 }
 

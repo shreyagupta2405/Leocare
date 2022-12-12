@@ -2,7 +2,7 @@ import React from 'react'
 
 function Blog({title, imageUrl, body, date}) {
   return (
-    <div className='card-container bg-gray-600 text-white hover:transform w-72 ml-24  overflow-hidden shadow-lg rounded-xl'>
+    <div className='card-container bg-gray-600 text-white hover:transform w-72 overflow-hidden shadow-lg rounded-xl '>
       <div className='image-container overflow-hidden h-64'>
         <img className='h-64' src={imageUrl} alt=''></img>
       </div>

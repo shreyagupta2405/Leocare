@@ -9,10 +9,10 @@ function Home() {
 
     return (
         <div>
-            <div className="container mt-16 flex flex-col mx-auto p-4">
+            <div className="container mt-8 flex flex-col mx-auto p-4">
 
                 <div className='flex flex-row items-center justify-center gap-10 my-4'>
-                    <div className='text-primary font-semibold text-[2rem]'>
+                    <div className='text-primary font-semibold lg:text-[2rem] text-[1.4rem]'>
                         Show you care, Change their world
                     </div>
                     <button type="button" className="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
@@ -100,62 +100,74 @@ function Home() {
                     </button>
                 </div>
 
+                <div className='text-primary font-semibold lg:text-[2rem] text-[1.4rem] my-16 text-center'>
 
-                <div className='text-center text-primary font-semibold text-[2rem] my-16'>
                     Journey to change the world starts here
                 </div>
 
-                <div className='flex flex-row gap-4 justify-center '>
+                <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-4">
 
                     <div
                         onMouseEnter={() => setIsShownCard1(true)}
                         onMouseLeave={() => setIsShownCard1(false)}
-                        class={`flex justify-center rounded-lg ${isShownCard1 ? "bg-primary": "bg-white"}`}>
-                        <div className={` block p-6 rounded-lg shadow-lg `}>
-                            <div className={`${isShownCard1 ? "bg-white" :"bg-primary"} p-4 rounded-lg shadow-xl w-[5rem]`}>
-                                {isShownCard1 ? <HospitalBlueIcon /> : <HospitalWhiteIcon  />}
+                        class={`flex justify-center rounded-lg `}>
+                        <div className={` block p-6 rounded-lg shadow-lg ${isShownCard1 ? "bg-primary" : "bg-white"}`}>
+                            <div className={`${isShownCard1 ? "bg-white" : "bg-primary"} p-4 rounded-lg shadow-xl w-[5rem]`}>
+                                {isShownCard1 ? <HospitalBlueIcon /> : <HospitalWhiteIcon />}
                             </div>
 
-                            <p class={`${isShownCard1 ? "text-white": "text-primary"} text-base mb-4  mt-4`}>
+                            <p class={`${isShownCard1 ? "text-white" : "text-primary"} text-base mb-4  mt-4`}>
                                 Educate a Child
                             </p>
                         </div>
                     </div>
 
-                    <div class="flex justify-center">
-                        <div class="block p-6 rounded-lg shadow-lg bg-white max-w-sm">
-                            <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Card title</h5>
-                            <p class="text-gray-700 text-base mb-4">
-                                Some quick example text to build on the card title and make up the bulk of the card's
-                                content.
+                    <div
+                        onMouseEnter={() => setIsShownCard1(true)}
+                        onMouseLeave={() => setIsShownCard1(false)}
+                        class={`flex justify-center rounded-lg `}>
+                        <div className={` block p-6 rounded-lg shadow-lg ${isShownCard1 ? "bg-primary" : "bg-white"}`}>
+                            <div className={`${isShownCard1 ? "bg-white" : "bg-primary"} p-4 rounded-lg shadow-xl w-[5rem]`}>
+                                {isShownCard1 ? <HospitalBlueIcon /> : <HospitalWhiteIcon />}
+                            </div>
+
+                            <p class={`${isShownCard1 ? "text-white" : "text-primary"} text-base mb-4  mt-4`}>
+                                Educate a Child
                             </p>
-                            <button type="button" class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Button</button>
                         </div>
                     </div>
-                    <div class="flex justify-center">
-                        <div class="block p-6 rounded-lg shadow-lg bg-white max-w-sm">
-                            <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Card title</h5>
-                            <p class="text-gray-700 text-base mb-4">
-                                Some quick example text to build on the card title and make up the bulk of the card's
-                                content.
+
+                    <div
+                        onMouseEnter={() => setIsShownCard1(true)}
+                        onMouseLeave={() => setIsShownCard1(false)}
+                        class={`flex justify-center rounded-lg`}>
+                        <div className={` block p-6 rounded-lg shadow-lg ${isShownCard1 ? "bg-primary" : "bg-white"}`}>
+                            <div className={`${isShownCard1 ? "bg-white" : "bg-primary"} p-4 rounded-lg shadow-xl w-[5rem]`}>
+                                {isShownCard1 ? <HospitalBlueIcon /> : <HospitalWhiteIcon />}
+                            </div>
+
+                            <p class={`${isShownCard1 ? "text-white" : "text-primary"} text-base mb-4  mt-4`}>
+                                Educate a Child
                             </p>
-                            <button type="button" class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Button</button>
                         </div>
                     </div>
+
                 </div>
-                <div className='mt-20 text-center text-primary font-semibold text-[2rem] my-16'>
+
+
+                <div className='text-primary font-semibold lg:text-[2rem] text-[1.4rem] my-16 text-center'>
                     Our Impact
                 </div>
                 <Cards />
-                <div className='mt-20 text-center text-primary font-semibold text-[2rem] my-16'>
+                <div className='text-primary font-semibold lg:text-[2rem] text-[1.4rem] my-16 text-center'>
                     Blog Posts
                 </div>
-            <Blogs />
-            <Stats />
+                <Blogs />
+                {/* <Stats /> */}
             </div>
-            
+
         </div>
-        
+
     )
 }
 
