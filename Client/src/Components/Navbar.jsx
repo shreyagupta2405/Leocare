@@ -7,7 +7,7 @@ function Navbar() {
     return (
         <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
             <div className=" flex flex-wrap items-center justify-between mx-auto">
-                <a href="https://flowbite.com/" className="flex items-center">
+                <a className="flex items-center">
                     <img src={im} className="h-12 w-13 mr-2 " alt="Flowbite Logo" />
                     <h1 className="text-primary font-bold text-[2rem]">Leocare</h1>
                 </a>
