@@ -1,47 +1,48 @@
 import React from 'react'
 import img from "./images/team1.jpg";
 
-function team(){
+function team() {
     return (
         <div className='bg-purple-100 block justify-center my-20'>
-        <div className='text-primary font-semibold lg:text-[2rem] 
+            <div className='text-primary font-semibold lg:text-[2rem] 
         text-[1.4rem]  text-center mt-6'> Meet the Team
-        </div>
+            </div>
 
-        <div className='text-center  text-lg'>Meet the team responsible for bringing enlightenment to so many lives</div>
-        <div className='justify-center items-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 p-8 mb-12'>
-            <div className='justify-center block ml-20'>
-                <div className='flex justify-center'>
+            <div className='text-center  text-lg'>Meet the team responsible for bringing enlightenment to so many lives</div>
+            <div className='justify-center items-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 p-8 mb-12'>
+
+                <div className='justify-center block '>
+                    <div className='flex justify-center'>
                         <img className='mx-auto mb-4 w-36 h-36 rounded-full' src={img}></img>
-                </div>
-                <div className='text-center font-extrabold' >
+                    </div>
+                    <div className='text-center font-extrabold' >
                         <h3 className='text-xl font-bold tracking-tight text-gray-900 dark:text-white'>
-                        U D P LATHA Durga Padma Latha
+                            U D P LATHA Durga Padma Latha
                         </h3> <br></br>
                         <h3 className='text-center text-gray-500 dark:text-gray-400"'>
-                        President <br></br>
-                        Founder | CEO <br></br>
+                            President <br></br>
+                            Founder | CEO <br></br>
                         </h3>
-                        
+
+                    </div>
+
+                </div>
+
+                <div className='justify-center block '>
+                    <div className='flex justify-center'>
+                        <img className='mx-auto mb-4 w-36 h-36 rounded-full' src={img}></img>
+                    </div>
+                    <div className='text-center font-extrabold' >
+                        <h3 className='text-xl font-bold tracking-tight text-gray-900 dark:text-white'>
+                            Viswa Jyothi
+                        </h3> <br></br>
+                        Vice President <br></br>
+                        | Compliance | <br></br>
+                    </div>
+
                 </div>
 
             </div>
-
-            <div className='justify-center block mr-20'>
-            <div className='flex justify-center'>
-                    <img className='mx-auto mb-4 w-36 h-36 rounded-full' src={img}></img>
-             </div>
-             <div className='text-center font-extrabold' >
-             <h3 className='text-xl font-bold tracking-tight text-gray-900 dark:text-white'>
-                    Viswa Jyothi
-                        </h3> <br></br>
-                    Vice President <br></br>
-                     | Compliance | <br></br>
-            </div>
-
-            </div>
-
-        </div>
         </div>
     );
 }

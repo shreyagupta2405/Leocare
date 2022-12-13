@@ -2,7 +2,7 @@ import React from 'react'
 
 function Text({title, body}) {
   return (
-    <div className='card-container hover:transform h-48 bg-white  overflow-hidden shadow-lg rounded-xl flex justify-center content-center'>
+    <div className='card-container hover:transform  bg-white  overflow-hidden shadow-lg rounded-xl flex justify-center content-center'>
       <div className='card-title my-8'>
         <h3 className='font-extrabold text-center text-xl'>{title}
          </h3>
