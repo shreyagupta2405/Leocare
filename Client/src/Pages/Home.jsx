@@ -111,7 +111,7 @@ function Home() {
                     Journey to change the world starts here
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
 
                     <div
                         onMouseEnter={() => setIsShownCard1(true)}
@@ -138,7 +138,7 @@ function Home() {
                             </div>
 
                             <p class={`${isShownCard1 ? "text-white" : "text-primary"} text-base mb-4  mt-4`}>
-                                Educate a Child
+                                Career Development
                             </p>
                         </div>
                     </div>
@@ -153,11 +153,28 @@ function Home() {
                             </div>
 
                             <p class={`${isShownCard1 ? "text-white" : "text-primary"} text-base mb-4  mt-4`}>
-                                Educate a Child
+                                Women's Skill Development
                             </p>
                         </div>
                     </div>
 
+
+                    <div
+                        onMouseEnter={() => setIsShownCard1(true)}
+                        onMouseLeave={() => setIsShownCard1(false)}
+                        class={`flex justify-center rounded-lg`}>
+                        <div className={` block p-6 rounded-lg shadow-lg ${isShownCard1 ? "bg-primary" : "bg-white"}`}>
+                            <div className={`${isShownCard1 ? "bg-white" : "bg-primary"} p-4 rounded-lg shadow-xl w-[5rem]`}>
+                                {isShownCard1 ? <HospitalBlueIcon /> : <HospitalWhiteIcon />}
+                            </div>
+
+                            <p class={`${isShownCard1 ? "text-white" : "text-primary"} text-base mb-4  mt-4`}>
+                                Educate a Child
+                            </p>
+                        </div>
+
+                        
+                    </div>
                 </div>
 
                 <Info />
@@ -172,7 +189,7 @@ function Home() {
                 
                 <Blogs />
                 {/* <Testimonial /> */}
-                {/* <Stats /> */}
+                <Stats />
                 
                 <Team />
                 
