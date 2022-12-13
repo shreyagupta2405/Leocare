@@ -3,7 +3,7 @@ import React from 'react'
 function Card({ title, imageUrl, body }) {
   return (
     <div className='card-container hover:transform w-72  overflow-hidden shadow-lg rounded-xl'>
-      <div className='image-container overflow-hidden h-56'>
+      <div className='image-container overflow-hidden h-56 mb-4'>
         <img src={imageUrl} alt=''></img>
       </div>
       <div className='card-title'>

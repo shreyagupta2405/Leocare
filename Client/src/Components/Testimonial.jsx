@@ -3,9 +3,10 @@ import React from 'react'
 function Testimonial() {
   return (
     <div>
-      testimonial
+      <h1>Testimonial</h1>
     </div>
   )
 }
 
 export default Testimonial
+

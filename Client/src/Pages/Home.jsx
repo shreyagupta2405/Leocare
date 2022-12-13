@@ -3,13 +3,19 @@ import { HospitalBlueIcon, HospitalWhiteIcon } from '../Components/Icons'
 import Cards from "../Components/Cards";
 import Blogs from "../Components/Blogs";
 import Stats from "../Components/Stats";
+import Team from '../Components/Team';
+import Info from '../Components/Info';
+import Testimonial from '../Components/Testimonial';
+import h1 from "../Components/images/home1.jpg";
+import h2 from "../Components/images/home2.jpg";
+import h3 from "../Components/images/home3.png";
 function Home() {
 
     const [isShownCard1, setIsShownCard1] = useState(false);
 
     return (
         <div>
-            <div className="container mt-8 flex flex-col mx-auto p-4">
+            <div className="container mt-2 flex flex-col  ">
 
                 <div className='flex flex-row items-center justify-center gap-10 my-4'>
                     <div className='text-primary font-semibold lg:text-[2rem] text-[1.4rem]'>
@@ -22,7 +28,7 @@ function Home() {
                 </div>
 
 
-                <div id="carouselExampleCaptions" className="carousel slide relative w-full " data-bs-ride="carousel">
+                <div id="carouselExampleCaptions" className="p-4 carousel slide relative w-full " data-bs-ride="carousel">
                     <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
                         <button
                             type="button"
@@ -48,8 +54,8 @@ function Home() {
                     <div className="carousel-inner relative w-full overflow-hidden">
                         <div className="carousel-item active relative float-left w-full">
                             <img
-                                src="https://mdbootstrap.com/img/Photos/Slides/img%20(15).jpg"
-                                className="block w-full rounded-lg"
+                                src={h1}
+                                className="block h-fit w-full rounded-lg"
                                 alt="..."
                             />
                             <div className="carousel-caption hidden md:block absolute text-center">
@@ -59,8 +65,8 @@ function Home() {
                         </div>
                         <div className="carousel-item relative float-left w-full">
                             <img
-                                src="https://mdbootstrap.com/img/Photos/Slides/img%20(22).jpg"
-                                className="block w-full  rounded-lg"
+                                src={h2}
+                                className="block rounded-lg"
                                 alt="..."
                             />
                             <div className="carousel-caption hidden md:block absolute text-center">
@@ -70,8 +76,8 @@ function Home() {
                         </div>
                         <div className="carousel-item relative float-left w-full">
                             <img
-                                src="https://mdbootstrap.com/img/Photos/Slides/img%20(23).jpg"
-                                className="block w-full rounded-lg"
+                                src={h3}
+                                className="block rounded-lg"
                                 alt="..."
                             />
                             <div className="carousel-caption hidden md:block absolute text-center">
@@ -154,16 +160,22 @@ function Home() {
 
                 </div>
 
-
+                <Info />
                 <div className='text-primary font-semibold lg:text-[2rem] text-[1.4rem] my-16 text-center'>
                     Our Impact
                 </div>
                 <Cards />
+                
                 <div className='text-primary font-semibold lg:text-[2rem] text-[1.4rem] my-16 text-center'>
                     Blog Posts
                 </div>
+                
                 <Blogs />
+                {/* <Testimonial /> */}
                 {/* <Stats /> */}
+                
+                <Team />
+                
             </div>
 
         </div>
