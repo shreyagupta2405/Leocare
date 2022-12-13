@@ -3,11 +3,14 @@ import img from "./images/team1.jpg";
 
 function team(){
     return (
-        <div className='bg-purple-200 block justify-center my-20'>
+        <div className='bg-purple-100 block justify-center my-20'>
         <div className='text-primary font-semibold lg:text-[2rem] 
-        text-[1.4rem] my-16 text-center mt-6'> Meet the Team</div>
-        <div className='justify-center items-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 mb-12'>
-            <div className='justify-center block ml-10'>
+        text-[1.4rem]  text-center mt-6'> Meet the Team
+        </div>
+
+        <div className='text-center  text-lg'>Meet the team responsible for bringing enlightenment to so many lives</div>
+        <div className='justify-center items-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 p-8 mb-12'>
+            <div className='justify-center block ml-20'>
                 <div className='flex justify-center'>
                         <img className='mx-auto mb-4 w-36 h-36 rounded-full' src={img}></img>
                 </div>
@@ -24,13 +27,13 @@ function team(){
 
             </div>
 
-            <div className='justify-center block mr-10'>
+            <div className='justify-center block mr-20'>
             <div className='flex justify-center'>
                     <img className='mx-auto mb-4 w-36 h-36 rounded-full' src={img}></img>
              </div>
              <div className='text-center font-extrabold' >
              <h3 className='text-xl font-bold tracking-tight text-gray-900 dark:text-white'>
-                        U D P LATHA Durga Padma Latha
+                    Viswa Jyothi
                         </h3> <br></br>
                     Vice President <br></br>
                      | Compliance | <br></br>
