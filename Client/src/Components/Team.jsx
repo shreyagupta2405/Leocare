@@ -19,7 +19,7 @@ function team() {
                         <h3 className='text-xl font-bold tracking-tight text-gray-900 dark:text-white'>
                             U D P LATHA Durga Padma Latha
                         </h3> <br></br>
-                        <h3 className='text-center text-gray-500 dark:text-gray-400"'>
+                        <h3 className='text-center text-gray-500 dark:text-gray-400'>
                             President <br></br>
                             Founder | CEO <br></br>
                         </h3>
@@ -36,8 +36,11 @@ function team() {
                         <h3 className='text-xl font-bold tracking-tight text-gray-900 dark:text-white'>
                             Viswa Jyothi
                         </h3> <br></br>
+                        <h3 className='text-center text-gray-500 dark:text-gray-400'>
                         Vice President <br></br>
                         | Compliance | <br></br>
+                        </h3>
+                        
                     </div>
 
                 </div>
