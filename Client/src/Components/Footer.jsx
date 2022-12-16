@@ -45,9 +45,8 @@ function Footer() {
                 <div class=" mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-32">
                     <div class="mx-auto max-w-sm lg:max-w-none mt-24">
                         <p class="mt-4 lg:ml-24 text-center text-gray-500 lg:text-left lg:text-lg">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium
-                            natus quod eveniet aut perferendis distinctio iusto repudiandae,
-                            provident velit earum?
+                        Keep up with our events on social media <br></br>
+                        leocarefoundation@gmail.com
                         </p>
 
                         <div class="mt-6 lg:ml-24 flex justify-center gap-4 lg:justify-start">
@@ -164,68 +163,44 @@ function Footer() {
                     <div
                         class="mt-24 grid grid-cols-1 gap-8 text-center lg:grid-cols-3 lg:text-left"
                     >
-                        <div>
-                            <strong class="font-medium text-gray-900"> Services </strong>
-
-                            <nav
-                                aria-label="Footer Services Nav"
-                                class="mt-6 flex flex-col space-y-1"
-                            >
-                                <a class="text-gray-700 transition hover:text-gray-700/75" href="/">
-                                    Marketing
-                                </a>
-                                <a class="text-gray-700 transition hover:text-gray-700/75" href="/">
-                                    Graphic Design
-                                </a>
-                                <a class="text-gray-700 transition hover:text-gray-700/75" href="/">
-                                    App Development
-                                </a>
-                                <a class="text-gray-700 transition hover:text-gray-700/75" href="/">
-                                    Web Development
-                                </a>
-                            </nav>
-                        </div>
+                        
 
                         <div>
-                            <strong class="font-medium text-gray-900"> About </strong>
+                            <strong class="text-center font-medium text-gray-900"> Contact </strong>
 
                             <nav
                                 aria-label="Footer About Nav"
                                 class="mt-6 flex flex-col space-y-1"
                             >
-                                <a class="text-gray-700 transition hover:text-gray-700/75" href="/">
-                                    About
+                                <a class=" text-gray-700 transition hover:text-gray-700/75" href="/">
+                                Plot 28,Libra avenue, Nadergul,
                                 </a>
                                 <a class="text-gray-700 transition hover:text-gray-700/75" href="/">
-                                    Careers
+                                Hyderabad, Telangana. 501510
                                 </a>
-                                <a class="text-gray-700 transition hover:text-gray-700/75" href="/">
-                                    History
-                                </a>
-                                <a class="text-gray-700 transition hover:text-gray-700/75" href="/">
-                                    Our Team
-                                </a>
+                               
+                                
                             </nav>
                         </div>
 
                         <div>
-                            <strong class="font-medium text-gray-900"> Support </strong>
+                            <strong class="font-medium text-gray-900"> Mobile </strong>
 
                             <nav
                                 aria-label="Footer Support Nav"
                                 class="mt-6 flex flex-col space-y-1"
                             >
                                 <a class="text-gray-700 transition hover:text-gray-700/75" href="/">
-                                    FAQs
+                                9398695177
+
+
                                 </a>
 
                                 <a class="text-gray-700 transition hover:text-gray-700/75" href="/">
-                                    Contact
+                                9550001512
                                 </a>
 
-                                <a class="text-gray-700 transition hover:text-gray-700/75" href="/">
-                                    Live Chat
-                                </a>
+                                
                             </nav>
                         </div>
                     </div>
@@ -233,22 +208,9 @@ function Footer() {
 
                 <div class="mt-16 border-t border-gray-100 pt-8">
                     <p class="text-center text-xs leading-relaxed text-gray-500">
-                        © Company 2022. All rights reserved.
+                        © Leocare. All rights reserved.
 
-                        <br />
-
-                        Created with
-                        <a
-                            href=""
-                            class="text-gray-700 underline transition hover:text-gray-700/75"
-                        >Laravel</a
-                        >
-                        and
-                        <a
-                            href=""
-                            class="text-gray-700 underline transition hover:text-gray-700/75"
-                        >Laravel Livewire</a
-                        >.
+           
                     </p>
                 </div>
             </div>
