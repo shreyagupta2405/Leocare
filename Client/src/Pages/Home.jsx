@@ -17,7 +17,7 @@ function Home() {
         <div>
             <div className=" mt-2 flex flex-col  ">
 
-                <div className='flex flex-col lg:flex-row items-center justify-center gap-10 my-4 p-8'>
+                <div className='flex flex-col lg:flex-row items-center justify-center gap-10 my-4 p-4 pb-2'>
                     <div className='text-primary font-semibold lg:text-[2rem] text-center text-[1.4rem]'>
                         Show you care, Change their world
                     </div>
@@ -171,7 +171,7 @@ function Home() {
                             </div>
 
                             <p class={`${isShownCard1 ? "text-white" : "text-primary"} text-base mb-4  mt-4`}>
-                                Educate a Child
+                                Volunteer
                             </p>
                         </div>
 

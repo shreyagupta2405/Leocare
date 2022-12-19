@@ -14,13 +14,13 @@ function info() {
         </h3>
       </div>
       <div className=' mx-auto p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 '>
-        <div className=' col-span-1 justify-center items-center flex h-full'>
+        <div className=' col-span-1 justify-center items-center flex h-35'>
           <Text
             title='Mission'
             body='To be committed to community development. To do good by passionately protecting the young and innocent,empathizing with the elderly and the underprivileged,aiding the poor and healing the sick .'
           />
         </div>
-        <div className='col-span-1  justify-center items-center flex'>
+        <div className='col-span-1  justify-center items-center flex h-35'>
           <Text
             title='Vision'
             body='We wish to nurture children, educate the young, empower women,care for the elderly and  protect the environment.' />
