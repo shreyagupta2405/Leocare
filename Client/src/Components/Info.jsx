@@ -1,9 +1,10 @@
 import React from 'react'
 import Text from './Text'
 
-function info() {
+function Info() {
   return (
-    <div className='p-4 mt-10 bg-purple-200 '>
+    <div id='info'>
+    <div  className=' p-4 mt-6 bg-purple-200 '>
       <div className='justify-center items-center mt-6'>
         {/* <h1 className='text-3xl font-extrabold flex justify-center items-center text-gray-800'>The Leocare Organization</h1> */}
         <h1 className=' flex justify-center items-center text-3xl text-center mt-2 text-gray-600 font-extrabold'>
@@ -27,8 +28,8 @@ function info() {
         </div>
       </div>
     </div>
-
+    </div>
   )
 }
 
-export default info
+export default Info
