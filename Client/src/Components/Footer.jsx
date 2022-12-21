@@ -5,7 +5,7 @@ function Footer() {
     return (
         <footer aria-label="Site Footer" class="bg-white">
             <div>
-                <div class="mx-auto container px-8 pt-16 pb-8 sm:px-6 lg:px-8">
+                <div class="mx-auto container px-8 pt-16 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 items-center justify-center">
                         <div class="mx-auto max-w-md mt-12">
                             <strong
@@ -34,9 +34,14 @@ function Footer() {
                                 </div>
                             </form>
                         </div>
-                        <div class="justify-center justify-self-center  bg-slate-900 text-white text-center text-lg">
-                            <img src={img} className='h-96'></img>
+
+                        <div class=" justify-center justify-self-center  bg-slate-900  text-black  text-center">
+
+                          <div className='sm:text-2xl lg:text-3xl font-serif'>News Articles</div>
+                           <img src={img} className='h-96'></img>
+                           <button className='text-md m-4 p-2 bg-blue-600 rounded-md hover:bg-blue-700 text-white w-32'>Read More</button>
                         </div>
+
                     </div>
 
 
@@ -173,7 +178,7 @@ function Footer() {
                                 class="mt-6 flex flex-col space-y-1"
                             >
                                 <a class=" text-gray-700 transition hover:text-gray-700/75" href="/">
-                                Plot 28,Libra avenue, Nadergul,
+                                Plot 28, Libra avenue, Nadergul,
                                 </a>
                                 <a class="text-gray-700 transition hover:text-gray-700/75" href="/">
                                 Hyderabad, Telangana. 501510
@@ -208,7 +213,7 @@ function Footer() {
 
                 <div class="mt-16 border-t border-gray-100 pt-8">
                     <p class="text-center text-xs leading-relaxed text-gray-500">
-                        © Leocare. All rights reserved.
+                        © Leocare 2022. All rights reserved.
 
            
                     </p>

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { HospitalBlueIcon, HospitalWhiteIcon } from '../Components/Icons'
 import Cards from "../Components/Cards";
 import Blogs from "../Components/Blogs";
 import Stats from "../Components/Stats";
@@ -9,6 +8,7 @@ import Testimonial from '../Components/Testimonial';
 import h1 from "../Components/images/home1.jpg";
 import h2 from "../Components/images/home2.jpg";
 import h3 from "../Components/images/home3.png";
+
 function Home() {
 
     const [isShownCard1, setIsShownCard1] = useState(false);
@@ -21,7 +21,8 @@ function Home() {
                     <div className='text-primary font-semibold lg:text-[2rem] text-center text-[1.4rem]'>
                         Show you care, Change their world
                     </div>
-                    <button type="button" className="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
+                    <button type="button" className="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-bold text-2xl rounded-lg px-5 py-2.5 text-center 
+                w-40 ">
                         DONATE
                     </button>
 
@@ -108,80 +109,16 @@ function Home() {
                 </div>
 
 
-                <div className='text-primary font-semibold lg:text-[2rem] text-[1.4rem] my-16 text-center'>
-
-                    Journey to change the world starts here
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-8">
-
-                    <div
-                        onMouseEnter={() => setIsShownCard1(true)}
-                        onMouseLeave={() => setIsShownCard1(false)}
-                        class={`flex justify-center rounded-lg `}>
-                        <div className={` block p-6 rounded-lg shadow-lg ${isShownCard1 ? "bg-primary" : "bg-white "} w-full`}>
-                            <div className={`${isShownCard1 ? "bg-white" : "bg-primary"} p-4 rounded-lg shadow-xl w-[5rem]`}>
-                                {isShownCard1 ? <HospitalBlueIcon /> : <HospitalWhiteIcon />}
-                            </div>
-
-                            <p class={`${isShownCard1 ? "text-white" : "text-primary"} text-base mb-4  mt-4`}>
-                                Educate a Child
-                            </p>
-                        </div>
-                    </div>
-
-                    <div
-                        onMouseEnter={() => setIsShownCard1(true)}
-                        onMouseLeave={() => setIsShownCard1(false)}
-                        class={`flex justify-center rounded-lg `}>
-                        <div className={` block p-6 rounded-lg shadow-lg ${isShownCard1 ? "bg-primary" : "bg-white "} w-full`}>
-                            <div className={`${isShownCard1 ? "bg-white" : "bg-primary"} p-4 rounded-lg shadow-xl w-[5rem]`}>
-                                {isShownCard1 ? <HospitalBlueIcon /> : <HospitalWhiteIcon />}
-                            </div>
-
-                            <p class={`${isShownCard1 ? "text-white" : "text-primary"} text-base mb-4  mt-4`}>
-                                Career Development
-                            </p>
-                        </div>
-                    </div>
-
-                    <div
-                        onMouseEnter={() => setIsShownCard1(true)}
-                        onMouseLeave={() => setIsShownCard1(false)}
-                        class={`flex justify-center rounded-lg`}>
-                        <div className={` block p-6 rounded-lg shadow-lg ${isShownCard1 ? "bg-primary" : "bg-white "} w-full`}>
-                            <div className={`${isShownCard1 ? "bg-white" : "bg-primary"} p-4 rounded-lg shadow-xl w-[5rem]`}>
-                                {isShownCard1 ? <HospitalBlueIcon /> : <HospitalWhiteIcon />}
-                            </div>
-
-                            <p class={`${isShownCard1 ? "text-white" : "text-primary"} text-base mb-4  mt-4`}>
-                                Women's Skill Development
-                            </p>
-                        </div>
-                    </div>
-
-
-                    <div
-                        onMouseEnter={() => setIsShownCard1(true)}
-                        onMouseLeave={() => setIsShownCard1(false)}
-                        class={`flex justify-center rounded-lg`}>
-                        <div className={` block p-6 rounded-lg shadow-lg ${isShownCard1 ? "bg-primary" : "bg-white"} w-full`}>
-                            <div className={`${isShownCard1 ? "bg-white" : "bg-primary"} p-4 rounded-lg shadow-xl w-[5rem]`}>
-                                {isShownCard1 ? <HospitalBlueIcon /> : <HospitalWhiteIcon />}
-                            </div>
-
-                            <p class={`${isShownCard1 ? "text-white" : "text-primary"} text-base mb-4  mt-4`}>
-                                Volunteer
-                            </p>
-                        </div>
-
-
-                    </div>
+                <div className='py-8 flex flex-col justify-center items-center'>
+                <button type="button" className="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-bold text-2xl rounded-lg px-5 py-2.5 text-center 
+                w-40 ">
+                        DONATE
+                    </button>
                 </div>
 
                 <Info />
                 <div className='text-primary font-semibold lg:text-[2rem] text-[1.4rem] my-16 text-center'>
-                    Our Impact
+                Journey to change the world starts here
                 </div>
                 <Cards />
 

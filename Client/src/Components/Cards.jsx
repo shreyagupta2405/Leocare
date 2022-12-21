@@ -6,25 +6,37 @@ import img3 from "./images/kid.png";
 
 function Cards() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 ">
+      
       <div className='justify-center items-center flex'>
         <Card
-          title='Environment'
+          link={'skills'}
+          title='Women&apos;s Skill Development'
           imageUrl={img1}
           body='Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
         />
       </div>
       <div className='justify-center items-center flex'>
         <Card
-          title='Skill Training'
-          imageUrl={img2}
+        link={'educate'}
+          title={`Educate a Child`}
+          imageUrl={img3}
           body='Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
         />
       </div>
       <div className='justify-center items-center flex'>
         <Card
-          title='Education'
-          imageUrl={img3}
+          link={''}
+          title='Volunteer'
+          imageUrl={img1}
+          body='Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+        />
+      </div>
+      <div className='justify-center items-center flex'>
+        <Card
+          link={'training'}
+          title='Skill Training'
+          imageUrl={img2}
           body='Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
         />
       </div>

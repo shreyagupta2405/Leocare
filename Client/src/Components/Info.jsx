@@ -3,7 +3,7 @@ import Text from './Text'
 
 function info() {
   return (
-    <div className='p-4 mt-16 bg-purple-200 '>
+    <div className='p-4 mt-10 bg-purple-200 '>
       <div className='justify-center items-center mt-6'>
         {/* <h1 className='text-3xl font-extrabold flex justify-center items-center text-gray-800'>The Leocare Organization</h1> */}
         <h1 className=' flex justify-center items-center text-3xl text-center mt-2 text-gray-600 font-extrabold'>
