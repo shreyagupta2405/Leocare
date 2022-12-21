@@ -117,9 +117,7 @@ function Home() {
                 </div>
 
                 <Info />
-                <div className='text-primary font-semibold lg:text-[2rem] text-[1.4rem] my-16 text-center'>
-                Journey to change the world starts here
-                </div>
+                
                 <Cards />
 
                 <div className='text-primary font-semibold lg:text-[2rem] text-[1.4rem] my-16 text-center'>

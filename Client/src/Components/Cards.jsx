@@ -6,7 +6,11 @@ import img3 from "./images/kid.png";
 
 function Cards() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 ">
+    <div id='cards'>
+    <div className='text-primary font-semibold lg:text-[2rem] text-[1.4rem] my-16 text-center'>
+                Journey to change the world starts here
+                </div>
+    <div  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 ">
       
       <div className='justify-center items-center flex'>
         <Card
@@ -41,6 +45,7 @@ function Cards() {
         />
       </div>
       
+    </div>
     </div>
   )
 }
