@@ -120,11 +120,9 @@ function Home() {
                 
                 <Cards />
 
-                <div className='text-primary font-semibold lg:text-[2rem] text-[1.4rem] my-16 text-center'>
-                    Blog Posts
-                </div>
+               
 
-                <Blogs />
+                
                 {/* <Testimonial /> */}
                 <Stats />
 

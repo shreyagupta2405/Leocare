@@ -5,7 +5,7 @@ function Footer() {
     return (
         <footer id='footer' aria-label="Site Footer" class="bg-white">
             <div>
-                <div class="mx-auto container px-8 pt-16 sm:px-6 lg:px-8">
+                <div class="mx-auto container  pt-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 items-center justify-center">
                         <div class="mx-auto max-w-md mt-12">
                             <strong
