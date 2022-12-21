@@ -10,7 +10,7 @@ function Blog({title, imageUrl, body, date}) {
         <h3 className='font-extrabold text-center'>{title}</h3>
         <div className='text-center font-light text-gray-400'>{date}</div>
       </div>
-      <div className='card-body mt-6 m-4 text-center'>{body}</div>
+      <div className='card-body  m-4 text-center'>{body}</div>
     </div>
   )
 }
