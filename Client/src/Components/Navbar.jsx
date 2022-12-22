@@ -6,7 +6,7 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 function Navbar() {
 
     return (
-        <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900 drop-shadow-lg">
+        <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900 drop-shadow-lg ">
             <div className=" flex flex-wrap items-center justify-between mx-auto ">
                 <a className="flex items-center">
                     <img src={im} className="h-13 w-14 mr-2 "  />
