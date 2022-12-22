@@ -15,9 +15,9 @@ function Home() {
 
     return (
         <div>
-            <div className=" mt-2 flex flex-col  ">
+            <div className=" mt-4 flex flex-col  ">
 
-                <div className='flex flex-col lg:flex-row items-center justify-center gap-10 my-4 p-4 pb-2'>
+                <div className='flex flex-col lg:flex-row items-center justify-center gap-10  p-4 pb-2'>
                     <div className='text-primary font-semibold lg:text-[2rem] text-center text-[1.4rem]'>
                         Show you care, Change their world
                     </div>
@@ -29,7 +29,7 @@ function Home() {
                 </div>
 
                 <div>
-                    <div id="carouselExampleCaptions" className="p-8 carousel slide relative w-full " data-bs-ride="carousel">
+                    <div id="carouselExampleCaptions" className="p-6 carousel slide relative w-full " data-bs-ride="carousel">
                         <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
                             <button
                                 type="button"
@@ -116,20 +116,15 @@ function Home() {
                     </button>
                 </div>
 
+
+
                 <Info />
-                
                 <Cards />
-
-               
-
-                
                 {/* <Testimonial /> */}
                 <Stats />
-
                 <Team />
 
             </div>
-
         </div>
 
     )
