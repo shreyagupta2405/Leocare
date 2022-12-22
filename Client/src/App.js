@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 import routes from './routes';
 import Navbar from "./Components/Navbar";
+import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 
 const Loader = () => (
@@ -23,6 +24,7 @@ function App() {
     <Suspense fallback={Loader()}>
       {
           <Router >
+          <Header />
             <Navbar/>
             <Routes>
               {

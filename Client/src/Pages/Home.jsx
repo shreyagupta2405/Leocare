@@ -15,22 +15,10 @@ function Home() {
 
     return (
         <div>
-            <div className=" mt-4 flex flex-col  ">
-
-                <div className='flex flex-col lg:flex-row items-center justify-center gap-10  p-4 pb-2'>
-                    <div className='text-primary font-semibold lg:text-[2rem] text-center text-[1.4rem]'>
-                        Show you care, Change their world
-                    </div>
-                    <button type="button" className="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-bold text-2xl rounded-lg px-5 py-2.5 text-center 
-                w-40 ">
-                        DONATE
-                    </button>
-
-                </div>
-
+            <div className="  flex flex-col  ">
                 <div>
-                    <div id="carouselExampleCaptions" className="p-6 carousel slide relative w-full " data-bs-ride="carousel">
-                        <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
+                    <div id="carouselExampleCaptions" className=" carousel slide relative w-full " data-bs-ride="carousel">
+                        <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center  mb-4">
                             <button
                                 type="button"
                                 data-bs-target="#carouselExampleCaptions"
