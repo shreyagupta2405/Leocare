@@ -37,9 +37,9 @@ function Footer() {
 
                         <div class=" justify-center justify-self-center  bg-slate-900  text-black  text-center">
 
-                          <div className='sm:text-2xl lg:text-3xl font-serif'>News Articles</div>
+                          <div className='text-3xl font-serif'>News Articles</div>
                            <img src={img} className='h-96'></img>
-                           <button className='text-md m-4 p-2 bg-blue-600 rounded-md hover:bg-blue-700 text-white w-32'><a href='/articles'> Read More</a></button>
+                           <button className='text-xl m-4 p-2 bg-blue-600 rounded-lg hover:bg-blue-700 text-white w-36'><a href='/articles'> Read More</a></button>
                         </div>
 
                     </div>
@@ -183,8 +183,6 @@ function Footer() {
                                 <a class="text-gray-700 transition hover:text-gray-700/75" href="/">
                                 Hyderabad, Telangana. 501510
                                 </a>
-                               
-                                
                             </nav>
                         </div>
 
@@ -197,15 +195,11 @@ function Footer() {
                             >
                                 <a class="text-gray-700 transition hover:text-gray-700/75" href="/">
                                 9398695177
-
-
                                 </a>
 
                                 <a class="text-gray-700 transition hover:text-gray-700/75" href="/">
                                 9550001512
                                 </a>
-
-                                
                             </nav>
                         </div>
                     </div>
@@ -213,9 +207,7 @@ function Footer() {
 
                 <div class="mt-16 border-t border-gray-100 pt-8">
                     <p class="text-center text-xs leading-relaxed text-gray-500">
-                        © Leocare 2022. All rights reserved.
-
-           
+                        © 2022 Leocare . All rights reserved.
                     </p>
                 </div>
             </div>
