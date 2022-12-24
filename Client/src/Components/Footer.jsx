@@ -22,7 +22,7 @@ function Footer() {
                                         class="w-full rounded-full border-gray-200 bg-gray-100 p-4 pr-32 text-sm font-medium"
                                         id="email"
                                         type="email"
-                                        placeholder="john@doe.com"
+                                        placeholder="john@gmail.com"
                                     />
 
                                     <button
