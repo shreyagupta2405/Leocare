@@ -15,10 +15,10 @@ function Educate() {
         <div className='grid place-items-center bg-white font-serif text-center text-gray-700'>
           <div className='text-4xl lg:text-5xl p-4'>Contact Information</div>
           <div className='text-2xl grid place-items-center'>
-            <div>Mobile: <br></br> +91 9398695177 / 9550001512 </div>
-            <div><br />Email: <br />leocarefoundation@gmail.com</div>
+            <div className='p-2'>Mobile: <br></br> +91 9398695177 / 9550001512 </div>
+            <div className=''><br />Email: <br />leocarefoundation@gmail.com</div>
           </div>
-          <div className='text-sm font-sans'> © 2022 Leocare</div>
+          <div className='text-sm font-sans p-4'> © 2022 Leocare</div>
         </div>
         <div className='text-center'>
         <img src={img} className=' w-full'></img>
