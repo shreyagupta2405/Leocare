@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-
+import Donate from './Donate';
 
 function Stats() {
   useEffect(() => {
@@ -32,6 +32,7 @@ function Stats() {
       <div className='flex flex-col justify-center items-center'>
         
         <form id="rzp_payment_form"></form>
+        <Donate />
       </div>
     </div>
   )
