@@ -2,11 +2,11 @@ import React from 'react'
 import Blog from '../Components/Blog';
 import b from '../Components/images/b.png'
 
-function Skills() {
+function Env() {
   return (
-    <div >
-    <div className='p-6 text-3xl text-primary flex flex-col justify-center items-center'>
-    Women's Skill Development
+    <div className='my-4 mb-16'>
+    <div className='p-6 text-3xl text-gray-700 flex flex-col justify-center items-center'>
+    Our Impact On the Environment
     </div>
       
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
@@ -42,4 +42,4 @@ function Skills() {
   )
 }
 
-export default Skills;
+export default Env;
