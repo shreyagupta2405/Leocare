@@ -4,6 +4,7 @@ import Blogs from "../Components/Blogs";
 import Stats from "../Components/Stats";
 import Team from '../Components/Team';
 import Info from '../Components/Info';
+import Donate from '../Components/Donate';
 import Events from '../Components/Events';
 import Testimonial from '../Components/Testimonial';
 import h1 from "../Components/images/home1.jpg";
@@ -101,6 +102,7 @@ function Home() {
                 w-40 ">
                         DONATE
                     </button>
+                    <Donate />
                 </div>
 
 

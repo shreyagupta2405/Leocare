@@ -10,7 +10,7 @@ function Events() {
     <div className='my-16 p-4 grid sm:grid-cols-1 lg:grid-cols-2'>
       <div className=''>
       
-        <div className=' text-left text-4xl text-gray-700 font-extrabold p-4 '>Upcoming Events</div>
+        <div className=' text-center text-4xl text-gray-700 font-extrabold p-4 '>Upcoming Events</div>
 
 {/* 1st card */}
           <div className='text-center lg:text-left grid sm:grid-cols-1 lg:grid-cols-2 p-8 '>
