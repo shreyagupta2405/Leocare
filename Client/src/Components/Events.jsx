@@ -12,8 +12,8 @@ function Events() {
       
         <div className=' text-left text-4xl text-gray-700 font-extrabold p-4 '>Upcoming Events</div>
 
-
-          <div className='grid sm:grid-cols-1 lg:grid-cols-2 p-8 '>
+{/* 1st card */}
+          <div className='text-center lg:text-left grid sm:grid-cols-1 lg:grid-cols-2 p-8 '>
           <div className='mx-auto'>
                 <img className='h-36' src={img4}></img>
             </div>
@@ -27,37 +27,39 @@ function Events() {
             
             </div>
 
-
-            <div className='grid sm:grid-cols-1 lg:grid-cols-2 p-8 '>
-            <div className=' mx-auto'>
+            {/* 2nd card */}
+            <div className='text-center lg:text-left grid sm:grid-cols-1 lg:grid-cols-2 p-8 '>
+          <div className='mx-auto'>
                 <img className='h-36' src={img2}></img>
             </div>
-          <div className='grid p-2'>
-                {/* Plantation Drive <br></br> */}
-                <div className='text-md text-left'>Plantation Drive  </div> 
-               <div className='text-sm text-left'>Jan 2, 2023</div>  
-               <div className='text-sm text-gray-500 text-left'> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.</div>
-                <AnchorLink href="#footer" className='text-blue-500 hover:text-blue-700 text-left'>Contact Us</AnchorLink>
+          <div className='grid p-2 '>
+               <div className='text-md'>Plantation Drive </div> 
+               <div className='text-sm 
+            '>Jan 2, 2023</div>  
+               <div className='text-sm text-gray-500'> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.</div>
+                <AnchorLink href="#footer" className='text-blue-500 hover:text-blue-700'>Contact Us</AnchorLink>
             </div>
             
             </div>
 
+{/* 3rd card */}
             
             
-
-            <div className='grid sm:grid-cols-1 lg:grid-cols-2 p-8 '>
-            <div className=' mx-auto'>
+<div className='text-center lg:text-left grid sm:grid-cols-1 lg:grid-cols-2 p-8 '>
+          <div className='mx-auto'>
                 <img className='h-36' src={img3}></img>
             </div>
-          <div className='grid p-2'>
-          <div className='text-md text-left'>Health Camp for Children </div> 
-               <div className='text-sm text-left'>Jan 2, 2023</div>  
-               <div className='text-sm text-gray-500 text-left'> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.</div>
-                <AnchorLink href="#footer" className='text-blue-500 hover:text-blue-700 text-left'>Contact Us</AnchorLink>
-                
+          <div className='grid p-2 '>
+               <div className='text-md'>Health Camp for Children </div> 
+               <div className='text-sm 
+            '>Jan 2, 2023</div>  
+               <div className='text-sm text-gray-500'> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.</div>
+                <AnchorLink href="#footer" className='text-blue-500 hover:text-blue-700'>Contact Us</AnchorLink>
             </div>
             
             </div>
+
+            {/* end of cards section */}
 
       </div>
 
