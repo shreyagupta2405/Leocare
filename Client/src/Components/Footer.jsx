@@ -31,8 +31,15 @@ function Footer() {
                                     >
                                         Subscribe
                                     </button>
+                                    
                                 </div>
+                                
                             </form>
+                            <div className='p-4 flex flex-col items-center'>
+                                <button type="button" className=" text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-medium rounded-lg text-lg px-5 py-2.5 text-center ">
+        <a href='https://pages.razorpay.com/leocarefoundation' target="_blank">DONATE</a> 
+        </button>
+                                </div>
                         </div>
 
                         <div class=" justify-center justify-self-center  bg-slate-900  text-black  text-center">
@@ -57,7 +64,7 @@ function Footer() {
                         <div class="mt-6 lg:ml-24 flex justify-center gap-4 lg:justify-start">
                             <a
                                 class="text-gray-700 transition hover:text-gray-700/75"
-                                href=""
+                                href="https://www.facebook.com/leocarefoundation"
                                 target="_blank"
                                 rel="noreferrer"
                             >
