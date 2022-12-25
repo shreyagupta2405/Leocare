@@ -98,11 +98,11 @@ function Home() {
 
 
                 <div className='py-8 flex flex-col justify-center items-center'>
-                <button type="button" className="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-bold text-2xl rounded-lg px-5 py-2.5 text-center 
+                <button type="button" className="mt-4 text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-bold text-2xl rounded-lg px-5 py-2.5 text-center 
                 w-40 ">
-                        DONATE
+                       <a href='https://pages.razorpay.com/leocarefoundation' target="_blank">DONATE</a> 
                     </button>
-                    <Donate />
+                    
                 </div>
 
 
