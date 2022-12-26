@@ -9,6 +9,7 @@ export function HospitalWhiteIcon() {
       fill="none"
       viewBox="0 0 50 44"
     >
+    
       <g clipPath="url(#clip0_450_895)">
         <path
           fill="#fff"
