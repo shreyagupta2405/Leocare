@@ -32,7 +32,7 @@ function Stats() {
       <div className='flex flex-col justify-center items-center'>
         
         <form id="rzp_payment_form"></form>
-        <Donate />
+        {/* <Donate /> */}
       </div>
     </div>
   )
