@@ -14,7 +14,7 @@ function Header() {
         <div>Mail: @leocarefoundation.gmail.com</div>
       </div>
       {/* <Donate /> */}
-      <div className='mr-8 flex justify-center gap-8 lg:justify-end'>
+      <div className='lg:mr-8 flex justify-center gap-8 lg:justify-end'>
         <a
           className="flex justify-center items-center text-white transition hover:scale-75"
           href="https://www.facebook.com/leocarefoundation"
