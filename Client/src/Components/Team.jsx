@@ -1,5 +1,6 @@
 import React from 'react'
 import img from "./images/team1.jpg";
+import img2 from './images/team2.png'
 
 function team() {
     return (
@@ -30,7 +31,7 @@ function team() {
 
                 <div className='justify-center block '>
                     <div className='flex justify-center'>
-                        <img className='mx-auto mb-4 w-36 h-36 rounded-full' src={img}></img>
+                        <img className='mx-auto mb-4 w-36 h-36 rounded-full' src={img2}></img>
                     </div>
                     <div className='text-center font-extrabold' >
                         <h3 className='text-xl font-bold tracking-tight text-gray-900 dark:text-white'>
