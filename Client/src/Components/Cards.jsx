@@ -2,6 +2,7 @@ import React from 'react'
 import Card from './Card'
 import img1 from "./images/envv.jpg";
 import img2 from "./images/skill.jpg";
+import imgv from './images/volunteer.jpeg';
 import img3 from "./images/kid.png";
 
 function Cards() {
@@ -24,7 +25,7 @@ function Cards() {
         <Card
           link={''}
           title='Volunteer'
-          imageUrl={img1}
+          imageUrl={imgv}
           body='Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
         />
       </div>
