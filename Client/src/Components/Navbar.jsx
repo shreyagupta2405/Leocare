@@ -1,4 +1,5 @@
 import React from 'react'
+import SignUp from '../Pages/SignUp';
 import im from "./images/logo.png"
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
