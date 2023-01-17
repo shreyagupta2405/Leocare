@@ -11,7 +11,7 @@ import { BsFillTelephoneFill } from 'react-icons/bs'
 function Header() {
   return (
     <div className='justify-between bg-purple-400 flex flex-col lg:flex-row gap-2 lg:gap-10 p-2 '>
-      <div className='ml-4 text-white font-semibold lg:text-[1rem] text-[1rem] p-2 grid sm:grid-cols-1 lg:grid-cols-2'>
+      <div className=' text-white font-semibold lg:text-[1rem] text-[1rem] p-2 grid sm:grid-cols-1 lg:grid-cols-2'>
         <div className='flex items-center justify-center flex-row sm:px-2 lg:px-1'><BsFillTelephoneFill size={25} /> +91 9398695177/ 9550001512</div>
         <div className='flex items-center justify-center flex-row sm:px-2 lg:px-1'>
           <MdEmail size={25} /> @leocarefoundation.gmail.com</div>
