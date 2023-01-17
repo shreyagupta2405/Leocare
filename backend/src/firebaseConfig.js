@@ -2,7 +2,8 @@
 import firebase from 'firebase/compat/app'
 import 'firebase/compat/auth'
 import 'firebase/compat/firestore'
-
+import { getStorage } from "firebase/storage";
+// please watch this video https://www.youtube.com/watch?v=cXWDQhzC3do
 // leocareadmin@gmail.com  password : Admin@12345678
 const firebaseConfig = {
   apiKey: "AIzaSyCNEcTz--iRIoKrUqCbdbfs-Io22rVcYCw",
@@ -17,5 +18,5 @@ const firebaseConfig = {
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 const auth = firebaseApp.auth();
-
-export { db, auth };
+const storage = getStorage(firebaseApp);
+export { db, auth,storage };
