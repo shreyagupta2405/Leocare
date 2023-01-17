@@ -12,19 +12,19 @@ const routes = [
         privateRoute: true
     },
     {
-        path: "/Signin",
+        path: "/signin",
         component: <SignIn />,
         privateRoute: false
     },
     {
-        path: "/EduHome",
+        path: "/edu-home",
         component: <EduHome/>,
-        privateRoute: false
+        privateRoute: true
     },
     {
-        path: "/Events",
+        path: "/events",
         component: <Events/>,
-        privateRoute: false
+        privateRoute: true
     }
 ];
 export default routes;
