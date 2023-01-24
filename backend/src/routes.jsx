@@ -9,6 +9,7 @@ const Educate = React.lazy(() => import("./Pages/Educate"));
 const Environment = React.lazy(() => import("./Pages/Environment"));
 const News = React.lazy(() => import("./Pages/News"));
 const Skills = React.lazy(() => import("./Pages/Skills"));
+const SkillHome = React.lazy(() => import("./Pages/SkillHome"));
 
 const routes = [
     {
@@ -54,6 +55,11 @@ const routes = [
     {
         path: "/skills",
         component: <Skills/>,
+        privateRoute: true
+    },
+    {
+        path: "/skillhome",
+        component: <SkillHome/>,
         privateRoute: true
     }
 ];

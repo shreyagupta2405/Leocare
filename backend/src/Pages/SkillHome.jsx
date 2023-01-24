@@ -16,16 +16,16 @@ import {
 } from "firebase/storage";
 import { toast } from "react-toastify";
 import { toastArray } from '../Components/Toast'
+import skillhomeService from '../api/skillhome.service'
 import eduHomeService from '../api/eduHome.service'
 
 
-function EduHome() {
+function SkillHome() {
     const [image, setImage] = useState(null);
     const [eventData, setEventData] = useState([]);
 
 
     const validationSchema = yup.object().shape({
-        heading: yup.string().required("Required Field"),
         content: yup.string().required(),
         // email: yup.string().email('Invalid Email').required("Required Field"),
        
@@ -37,9 +37,8 @@ function EduHome() {
     });
     const addEventToStore = async (data, url) => {
         try {
-            await eduHomeService.addEvent(
+            await skillhomeService.addEvent(
                 {
-                    "heading": data?.heading,
                     "content": data?.content,
                     "url": url,
                 }
@@ -73,7 +72,7 @@ function EduHome() {
     
     const getAllEventFromStore = async () => {
         try {
-            const data = await eduHomeService.getAllEvents()
+            const data = await skillhomeService.getAllEvents()
             let arr = []
             data.forEach((doc) => {
                 arr.push({...doc.data(), id: doc.id})
@@ -84,7 +83,7 @@ function EduHome() {
         }
     }
     const deleteEvent = async (id) => {
-        await eduHomeService.deleteEvents(id);
+        await skillhomeService.deleteEvents(id);
         getAllEventFromStore();
     }
     useEffect(() => {
@@ -99,7 +98,7 @@ function EduHome() {
 
                     <div class="mt-2 bg-highlightBlue border border-borderColor p-4 rounded-lg">
                         <h2 class="text-center text-4xl text-indigo-900 font-display font-semibold lg:text-left xl:text-4xl
-                    xl:text-bold ">Educate a Child</h2>
+                    xl:text-bold ">Skills</h2>
                         <form id="hook-form" onSubmit={handleSubmit(onSubmit)}>
                             <input type="file"
                                 className=' w-full border-2 bg-white rounded-lg p-2 mt-4'
@@ -108,15 +107,7 @@ function EduHome() {
                                         setImage(event.target.files[0]);
                                     }
                                 }} />
-                            <FormInputComponent
-                                label='Heading'
-                                type='text'
-                                name='heading'
-                                placeholder='Enter the Heading'
-                                control={control}
-                                error={errors?.heading?.message}
-                                required
-                            />
+                            
                             <FormTextInput
                                 label='Content'
                                 type='text'
@@ -172,4 +163,4 @@ function EduHome() {
   )
 }
 
-export default EduHome;
+export default SkillHome;

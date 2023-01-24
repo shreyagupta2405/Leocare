@@ -66,6 +66,11 @@ function Events() {
         }
     }
 
+    const deleteEvent = async (id) => {
+        await eventsService.deleteEvents(id);
+        getAllEventFromStore();
+    }
+
     const onSubmit = async (data) => {
         if (image) {
             const imageRef = ref(storage, `images/${"1" + v4()}`);
@@ -156,18 +161,23 @@ function Events() {
                             <div className='p-2 m-4 w-5/6 outline-double'>
                                 <div className='flex justify-center items-center'>
                                     <img className='h-36
-                                    w-36' src={data?.url
+                                    ' src={data?.url
                                         } />
                                 </div>
                                 <div className='flex justify-center items-center'>
                                     <h1 className='text-2xl font-bold'>{data?.heading}</h1>
                                 </div>
                                 <div className='flex justify-center items-center'>
-                                    <p className='text-xl'>{data?.content}</p>
-                                </div>
-                                <div className='flex justify-center items-center'>
                                     <p className='text-xl'>{data?.date}</p>
                                 </div>
+                                <div className='flex justify-center items-center'>
+                                    <p className='text-xl'>{data?.content}</p>
+                                </div>
+                                <div className='m-2'>
+                                <button className='rounded-lg mx-2 bg-gray text-white w-20 h-8'>Edit</button>
+                                <button className='rounded-lg mx-2 bg-red text-white w-20 h-8' onClick={(e) => deleteEvent(data?.id)}>Delete</button>
+                                </div>
+                                
                             </div>
                         )
                     })
