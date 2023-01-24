@@ -39,7 +39,6 @@ function App() {
               <>
                 <Route path="/" element={<Layout />}>
                   {routes.map((route, idx) => {
-                    console.log(route.privateRoute && route.component)
                     return route.privateRoute && <Route
                       path={route.path}
                       element={route.privateRoute && route.component}

@@ -1,5 +1,5 @@
 import React from 'react'
-import {useState} from 'react'
+import { useState, useEffect } from 'react'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 import { useForm } from 'react-hook-form'
@@ -22,7 +22,7 @@ import { async } from '@firebase/util'
 function Events() {
     const [image, setImage] = useState(null);
     const [imageUrls, setImageUrls] = useState([]);
-    
+    const [eventData, setEventData] = useState([]);
 
     const validationSchema = yup.object().shape({
         heading: yup.string().required("Required Field"),
@@ -35,35 +35,50 @@ function Events() {
     const { register, handleSubmit, control, formState: { errors } } = useForm({
         resolver: yupResolver(validationSchema)
     });
-    
+    const addEventToStore = async (data, url) => {
+        try {
+            await eventsService.addEvent(
+                {
+                    "heading": data?.heading,
+                    "content": data?.content,
+                    "date": data?.postDate,
+                    "url": url,
+                    "timeStamp": new Date()
+                }
+            );
+
+        } catch (err) {
+            console.log(err);
+        }
+    }
+
+
+    const getAllEventFromStore = async () => {
+        try {
+            const data = await eventsService.getAllEvents()
+            let arr = []
+            data.forEach((doc) => {
+                arr.push({...doc.data(), id: doc.id})
+            })
+            setEventData(arr)
+        } catch (err) {
+            console.log(err);
+        }
+    }
+
     const onSubmit = async (data) => {
-        console.log(data)
         if (image) {
-            let link;
             const imageRef = ref(storage, `images/${"1" + v4()}`);
             uploadBytes(imageRef, image).then((snapshot) => {
                 getDownloadURL(snapshot.ref).then((url) => {
-                    link = url;
-                    
+                    addEventToStore(data, url)
                 }).catch((error) => {
                     console.log(error)
+                    toast.error("Can't upload", toastArray);
 
                 });
             });
-            try {
-                await eventsService.addEvent(
-                    {
-                        "heading": data?.heading,
-                        "content": data?.content,
-                        "date": "data?.date",
-                        "url": "link",
-                        "timeStamp": new Date()
-                    }
-                );
 
-            } catch (err) {
-                console.log(err);
-            }
 
         }
         else {
@@ -71,7 +86,11 @@ function Events() {
             toast.error("Please select an image", toastArray);
         }
 
-   }
+    }
+    useEffect(() => {
+        getAllEventFromStore()
+    }, [])
+
     return (
         <div class="lg:flex">
             <div class="lg:w-1/2 xl:max-w-screen-sm ">
@@ -128,27 +147,33 @@ function Events() {
 
             </div>
             <div className='text-black text-center grid place-items-center p-4 w-1/2'>
-                <div className='p-2 m-4 w-5/6 outline-double'>
-                    <div className='flex justify-center items-center'>
-                        <img className='h-36' ></img></div>
-                    <div className='p-1 '>Health Care & Wellness Camp</div>
-                    <div className='p-1'>02/01/2023</div>
-                    <div className='p-1  grid place-items-center'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris. </div>
-                </div>
 
+                {
+                    eventData &&
+                    eventData.map((data) => {
+                        console.log(data)
+                        return (
+                            <div className='p-2 m-4 w-5/6 outline-double'>
+                                <div className='flex justify-center items-center'>
+                                    <img className='h-36
+                                    w-36' src={data?.url
+                                        } />
+                                </div>
+                                <div className='flex justify-center items-center'>
+                                    <h1 className='text-2xl font-bold'>{data?.heading}</h1>
+                                </div>
+                                <div className='flex justify-center items-center'>
+                                    <p className='text-xl'>{data?.content}</p>
+                                </div>
+                                <div className='flex justify-center items-center'>
+                                    <p className='text-xl'>{data?.date}</p>
+                                </div>
+                            </div>
+                        )
+                    })
 
-                <div className='p-2 w-5/6 outline-double'>
-                    <div className='flex justify-center items-center'>
-                        <img className='h-36' ></img></div>
-                    <div className='p-1 '>Health Care & Wellness Camp</div>
-                    <div className='p-1'>02/01/2023</div>
-                    <div className='p-1  grid place-items-center'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.</div>
-                </div>
-
-
-
+                }
             </div>
-
         </div>
     )
 }
