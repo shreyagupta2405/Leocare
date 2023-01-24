@@ -28,7 +28,9 @@ module.exports = {
       lightGreen :"#4CA6A8",
       grey:"#9ca3af",
       pink: "#ff4969",
-      gold: "#eec103"
+      gold: "#eec103",
+      skyblue: "#24A0ED",
+      greensubmit: "#4CAF50"
     },
     extend: {
       fontFamily: {

@@ -10,6 +10,7 @@ import routes from "./routes";
 import { auth } from "./firebaseConfig";
 import NavBar from "./Pages/NavBar";
 import { Layout } from "./Layout";
+import Footer from "./Pages/Footer";
 
 const SignIn = React.lazy(() => import("./Pages/SignIn"));
 const Unauthorized = React.lazy(() => import("./Pages/Page404"));
@@ -51,7 +52,9 @@ function App() {
               </>
           }
         </Routes>
+        
       </Router>
+      
     </Suspense>
   );
 }

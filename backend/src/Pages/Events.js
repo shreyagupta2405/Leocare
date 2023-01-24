@@ -1,4 +1,5 @@
 import React from 'react'
+import {useState} from 'react'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 import { useForm } from 'react-hook-form'
@@ -17,21 +18,11 @@ import { toast } from "react-toastify";
 import { toastArray } from '../Components/Toast'
 import eventsService from '../api/events.service'
 import { async } from '@firebase/util'
+
 function Events() {
-    const [image, setImage] = React.useState(null)
-    const getTodayDate = () => {
-        var date = new Date();
-
-        var day = date.getDate();
-        var month = date.getMonth() + 1;
-        var year = date.getFullYear();
-
-        if (month < 10) month = "0" + month;
-        if (day < 10) day = "0" + day;
-
-        var today = year + "-" + month + "-" + day;
-        return today;
-    }
+    const [image, setImage] = useState(null);
+    const [imageUrls, setImageUrls] = useState([]);
+    
 
     const validationSchema = yup.object().shape({
         heading: yup.string().required("Required Field"),
@@ -44,6 +35,7 @@ function Events() {
     const { register, handleSubmit, control, formState: { errors } } = useForm({
         resolver: yupResolver(validationSchema)
     });
+    
     const onSubmit = async (data) => {
         console.log(data)
         if (image) {
@@ -79,7 +71,7 @@ function Events() {
             toast.error("Please select an image", toastArray);
         }
 
-    }
+   }
     return (
         <div class="lg:flex">
             <div class="lg:w-1/2 xl:max-w-screen-sm ">
