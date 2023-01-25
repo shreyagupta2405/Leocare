@@ -1,7 +1,12 @@
 import React from 'react'
 import {Link} from "react-router-dom";
+import {auth } from '../firebaseConfig';
+import { signOut } from 'firebase/auth';
 
 function NavBar() {
+  const logout = async () => {
+    await signOut(auth);
+  }
   return (
     <nav className="bg-white h-24 border-gray-200 px-2 sm:px-4 py-3 rounded dark:bg-gray-900 drop-shadow-lg ">
     <div className=" flex flex-wrap mt-4 items-center justify-between mx-auto ">
@@ -27,31 +32,20 @@ function NavBar() {
                 <li>
                 <Link to='/env' className='hover:text-primary text-lg'>Environment/Home</Link>
                 </li>
-
                 <li>
                 <Link to='/skillhome' className='hover:text-primary text-lg'>Skill Development/Home</Link>
                 </li>
-                
                 <li>
-                <Link to='/signin' className='hover:scale-75'><button className='rounded-md bg-second p-2 text-primary text-lg'>Logout</button></Link>
+                <Link onClick={logout} className='hover:scale-75'><button className='rounded-md bg-second p-2 text-primary text-lg'>Logout</button></Link>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
-    // <div className='text-white sm:h-40 lg:h-28  bg-primary grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-6 text-xl sm:p-4 lg:p-12 text-center'>
-    //     <Link to='/' className='hover:scale-75'>Home</Link>
-    //     <Link to='/events' className='hover:scale-75'>Events/Home</Link>
-    //     <Link to='/edu-home' className='hover:scale-75'>Educate/Home</Link>
-        
-    //     <Link className='hover:scale-75'>Environment/Home</Link>
-    //     <Link className='hover:scale-75'>Skill Development/Home</Link>
-    //     <Link to='/signin' className='hover:scale-75'><button className='rounded-md bg-second p-2 text-primary'>Logout</button></Link>
-    // </div>
   )
 }
 
-export default NavBar
+export default NavBar;
 
 // 
 
