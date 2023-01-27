@@ -10,7 +10,7 @@ function team() {
             </div>
 
             <div className='text-center  text-lg'>Meet the team responsible for bringing enlightenment to so many lives</div>
-            <div className='justify-center items-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 p-8 mb-12'>
+            <div className='justify-center items-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 p-8 mb-12 mx-20'>
 
                 <div className='justify-center block '>
                     <div className='flex justify-center'>
