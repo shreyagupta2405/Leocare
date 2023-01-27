@@ -22,7 +22,7 @@ function Events() {
                <div className='text-sm 
             '>Jan 2, 2023</div>  
                <div className='text-sm text-gray-500'> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.</div>
-                <AnchorLink href="#footer" className='text-blue-500 hover:text-blue-700'>Contact Us</AnchorLink>
+                <AnchorLink href="#contactus" className='text-blue-500 hover:text-blue-700'>Contact Us</AnchorLink>
             </div>
             
             </div>
@@ -37,7 +37,7 @@ function Events() {
                <div className='text-sm 
             '>Jan 2, 2023</div>  
                <div className='text-sm text-gray-500'> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.</div>
-                <AnchorLink href="#footer" className='text-blue-500 hover:text-blue-700'>Contact Us</AnchorLink>
+                <AnchorLink href="#contactus" className='text-blue-500 hover:text-blue-700'>Contact Us</AnchorLink>
             </div>
             
             </div>
@@ -54,7 +54,7 @@ function Events() {
                <div className='text-sm 
             '>Jan 2, 2023</div>  
                <div className='text-sm text-gray-500'> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.</div>
-                <AnchorLink href="#footer" className='text-blue-500 hover:text-blue-700'>Contact Us</AnchorLink>
+                <AnchorLink href="#contactus" className='text-blue-500 hover:text-blue-700'>Contact Us</AnchorLink>
             </div>
             
             </div>
