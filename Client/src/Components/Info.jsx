@@ -8,10 +8,10 @@ function Info() {
       <div className='justify-center items-center mt-6'>
         {/* <h1 className='text-3xl font-extrabold flex justify-center items-center text-gray-800'>The Leocare Organization</h1> */}
         <h1 className=' flex justify-center items-center text-3xl text-center mt-2 text-gray-600 font-extrabold'>
-          The Leocare Organization
+          The Leocare Foundation
         </h1>
         <h3 className=' flex justify-center items-center text-center mt-2 text-gray-600'>
-          Leocare foundation is a not-for profit company operating across India. Leocare operates a broad suite of projects and services aiming to improve the quality of life around the rural areas.
+          Leocare Foundation is a not-for profit company operating across India. Leocare Foundation operates a broad suite of projects and services aiming to improve the quality of life around the rural areas.
         </h3>
       </div>
       <div className=' mx-auto p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 '>

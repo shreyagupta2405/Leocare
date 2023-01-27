@@ -8,6 +8,7 @@ import Events from '../Components/Events';
 import h1 from "../Components/images/home1.jpg";
 import h2 from "../Components/images/home2.jpg";
 import h3 from "../Components/images/home3.png";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 function Home() {
 
@@ -15,7 +16,7 @@ function Home() {
 
     return (
         <div>
-            <div className="  flex flex-col  ">
+            <div className="flex flex-col">
                 <div>
                     <div id="carouselExampleCaptions" className=" carousel slide relative w-full " data-bs-ride="carousel">
                         <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center  mb-4">
@@ -95,20 +96,20 @@ function Home() {
                 </div>
 
 
-                <div className='py-8 flex flex-col justify-center items-center'>
+                <div className='py-8 flex flex-row gap-8 justify-center items-center'>
+
                 <button type="button" className="mt-4 text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-bold text-2xl rounded-lg px-5 py-2.5 text-center 
                 w-40 ">
                        <a href='https://pages.razorpay.com/leocarefoundation' target="_blank">DONATE</a> 
                     </button>
+                    <button type='button' className='mt-4 bg-blue-600 text-white rounded-lg px-5 py-3 lg:px-4 lg:py-2.5 hover:bg-blue-700 text-xl lg:text-2xl '><AnchorLink href='#footer'>SCAN & PAY</AnchorLink></button>
+                
                     
                 </div>
-
-
 
                 <Info />
                 <Events />
                 <Cards />
-                {/* <Testimonial /> */}
                 <Stats />
                 <Team />
 

@@ -94,7 +94,7 @@ function Footer() {
                     </div>
                 </div>
 
-                <div class=" pt-8">
+                <div class=" border-gray-100 pt-8">
                     <p class="text-center text-xs leading-relaxed text-gray-500">
                         © 2022 Leocare . All rights reserved.
                     </p>

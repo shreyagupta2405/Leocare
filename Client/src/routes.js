@@ -6,6 +6,7 @@ const Educate = React.lazy(() => import("./Pages/Educate"));
 const Skills = React.lazy(() => import("./Pages/Env"));
 const Training = React.lazy(() => import("./Pages/Training"));
 const Articles = React.lazy(() => import("./Pages/Articles"));
+const Docs = React.lazy(() => import("./Pages/Docs"));
 
 const routes = [ 
 	{
@@ -31,6 +32,10 @@ const routes = [
 	{
         path: "/articles",
 		component: <Articles/>,
+	},
+	{
+        path: "/docs",
+		component: <Docs/>,
 	},
 	
 

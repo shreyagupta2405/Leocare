@@ -1,11 +1,13 @@
 import React from 'react'
 import Donate from './Donate';
 import { BsFacebook } from 'react-icons/bs';
-import { BsTwitter } from 'react-icons/bs';
 import { BsInstagram } from 'react-icons/bs';
 import { BsLinkedin } from 'react-icons/bs';
 import { MdEmail } from 'react-icons/md'
 import { BsFillTelephoneFill } from 'react-icons/bs'
+import { IoLogoWhatsapp } from 'react-icons/io'
+import { BsYoutube } from 'react-icons/bs'
+
 // import { useEffect } from 'react';
 
 function Header() {
@@ -13,8 +15,8 @@ function Header() {
     <div className='justify-between bg-purple-400 flex flex-col lg:flex-row gap-2 lg:gap-10 p-2 '>
       <div className=' text-white font-semibold lg:text-[1rem] text-[1rem] p-2 grid sm:grid-cols-1 lg:grid-cols-2'>
         <div className='flex items-center justify-center flex-row sm:px-2 lg:px-1'><BsFillTelephoneFill size={25} /> +91 9398695177/ 9550001512</div>
-        <div className='flex items-center justify-center flex-row sm:px-2 lg:px-1'>
-          <MdEmail size={25} /> @leocarefoundation.gmail.com</div>
+        <div className='flex items-center justify-center gap-1 flex-row sm:px-2 lg:px-1'>
+          <MdEmail size={25} /> support@leocare.org</div>
 
       </div>
       {/* <Donate /> */}
@@ -35,7 +37,7 @@ function Header() {
         >
           <BsLinkedin size={25} />
         </a>
-
+        
         <a
           className="flex justify-center items-center text-white transition hover:scale-75"
           href="https://www.instagram.com/leocarefoundation/"
@@ -44,14 +46,20 @@ function Header() {
         >
           <BsInstagram size={25} />
         </a>
-
+        
         <a
-          className="flex justify-center items-center text-white transition hover:scale-75"
+        className="flex justify-center items-center text-white transition hover:scale-75"
+          href="https://wa.me/9550001512"
+          target="_blank"
+          rel="noreferrer">
+          <IoLogoWhatsapp size={28}/>
+        </a>
+        <a
+        className="flex justify-center items-center text-white transition hover:scale-75"
           href=""
           target="_blank"
-          rel="noreferrer"
-        >
-          <BsTwitter size={25} />
+          rel="noreferrer">
+          <BsYoutube className='mt-1' size={30}/>
         </a>
       </div>
 

@@ -21,16 +21,13 @@ import { async } from '@firebase/util'
 
 function Events() {
     const [image, setImage] = useState(null);
-    const [imageUrls, setImageUrls] = useState([]);
     const [eventData, setEventData] = useState([]);
 
     const validationSchema = yup.object().shape({
         heading: yup.string().required("Required Field"),
-        content: yup.string().min(20).required(),
-        // email: yup.string().email('Invalid Email').required("Required Field"),
+        content: yup.string().min(10).required(),
         postDate: yup.string(),
         // image: yup.mixed().required('File is required'),
-        //password: yup.string().required("Required Field").min(6)
     });
     const { register, handleSubmit, control, formState: { errors } } = useForm({
         resolver: yupResolver(validationSchema)
