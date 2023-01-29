@@ -5,13 +5,12 @@ import { getStorage } from "firebase/storage";
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBHzwbktISJ7Qnu8I-0KGw13m4sT_iAXkI",
-  authDomain: "code-editor-b24e1.firebaseapp.com",
-  projectId: "code-editor-b24e1",
-  storageBucket: "code-editor-b24e1.appspot.com",
-  messagingSenderId: "379438014309",
-  appId: "1:379438014309:web:80d259a32cf053f4270b8c",
-  measurementId: "G-2E27D2JZP1"
+  apiKey: "AIzaSyDINnPTrho44ypJ8pdaViPnw4Q-ZsALCMw",
+  authDomain: "leocare-backend.firebaseapp.com",
+  projectId: "leocare-backend",
+  storageBucket: "leocare-backend.appspot.com",
+  messagingSenderId: "878520102268",
+  appId: "1:878520102268:web:c8b60f83a6fafcf45848f9"
 };
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);

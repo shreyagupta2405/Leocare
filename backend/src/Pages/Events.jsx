@@ -13,6 +13,7 @@ import {
     getDownloadURL,
     listAll,
     list,
+    connectStorageEmulator,
 } from "firebase/storage";
 import { toast } from "react-toastify";
 import { toastArray } from '../Components/Toast'
@@ -56,6 +57,8 @@ function Events() {
             data.forEach((doc) => {
                 arr.push({...doc.data(), id: doc.id})
             })
+            console.log(arr)
+
             setEventData(arr)
         } catch (err) {
             console.log(err);
