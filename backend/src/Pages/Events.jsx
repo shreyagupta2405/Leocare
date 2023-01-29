@@ -49,7 +49,6 @@ function Events() {
         }
     }
 
-
     const getAllEventFromStore = async () => {
         try {
             const data = await eventsService.getAllEvents()

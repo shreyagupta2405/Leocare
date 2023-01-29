@@ -19,7 +19,7 @@ function NavBar() {
             <svg className="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
         </button>
         <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul className="flex flex-col  mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 items-center">
+            <ul className="flex flex-col mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 items-center">
                 <li>
                 <Link to='/' className='hover:text-primary text-lg'>Home</Link>
                 </li>
@@ -33,7 +33,10 @@ function NavBar() {
                 <Link to='/env' className='hover:text-primary text-lg'>Environment/Home</Link>
                 </li>
                 <li>
-                <Link to='/skillhome' className='hover:text-primary text-lg'>Skill Development/Home</Link>
+                <Link to='/skillhome' className='hover:text-primary text-lg'>Skill/Home</Link>
+                </li>
+                <li>
+                <Link to='/volunteer' className='hover:text-primary text-lg'>Volunteer/Home</Link>
                 </li>
                 <li>
                 <Link onClick={logout} className='hover:scale-75'><button className='rounded-md bg-second p-2 text-primary text-lg'>Logout</button></Link>

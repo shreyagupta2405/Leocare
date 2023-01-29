@@ -10,6 +10,7 @@ const Environment = React.lazy(() => import("./Pages/Environment"));
 const News = React.lazy(() => import("./Pages/News"));
 const Skills = React.lazy(() => import("./Pages/Skills"));
 const SkillHome = React.lazy(() => import("./Pages/SkillHome"));
+const Volunteer = React.lazy(() => import("./Pages/Volunteer"));
 
 const routes = [
     {
@@ -60,6 +61,11 @@ const routes = [
     {
         path: "/skillhome",
         component: <SkillHome/>,
+        privateRoute: true
+    },
+    {
+        path: "/volunteer",
+        component: <Volunteer/>,
         privateRoute: true
     }
 ];

@@ -16,27 +16,26 @@ import {
 } from "firebase/storage";
 import { toast } from "react-toastify";
 import { toastArray } from '../Components/Toast'
-import eduHomeService from '../api/eduHome.service'
+import volunteerService from '../api/volunteer.service'
 
 
-function EduHome() {
+function Volunteer() {
     const [image, setImage] = useState(null);
     const [eventData, setEventData] = useState([]);
 
-    const validationSchema = yup.object().shape({
-        heading: yup.string().required("Required Field"),
-        content: yup.string().required(),
-    });
 
+    const validationSchema = yup.object().shape({
+        content: yup.string().required(),
+       
+        // image: yup.mixed().required('File is required'),
+    });
     const { register, handleSubmit, control, formState: { errors } } = useForm({
         resolver: yupResolver(validationSchema)
     });
-
     const addEventToStore = async (data, url) => {
         try {
-            await eduHomeService.addEvent(
+            await volunteerService.addEvent(
                 {
-                    "heading": data?.heading,
                     "content": data?.content,
                     "url": url,
                 }
@@ -46,7 +45,6 @@ function EduHome() {
             console.log(err);
         }
     }
-
     const onSubmit = async (data) => {
         if (image) {
             const imageRef = ref(storage, `images/${"1" + v4()}`);
@@ -70,7 +68,7 @@ function EduHome() {
     
     const getAllEventFromStore = async () => {
         try {
-            const data = await eduHomeService.getAllEvents()
+            const data = await volunteerService.getAllEvents()
             let arr = []
             data.forEach((doc) => {
                 arr.push({...doc.data(), id: doc.id})
@@ -81,7 +79,7 @@ function EduHome() {
         }
     }
     const deleteEvent = async (id) => {
-        await eduHomeService.deleteEvents(id);
+        await volunteerService.deleteEvents(id);
         getAllEventFromStore();
     }
     useEffect(() => {
@@ -96,7 +94,7 @@ function EduHome() {
 
                     <div class="mt-2 bg-highlightBlue border border-borderColor p-4 rounded-lg">
                         <h2 class="text-center text-4xl text-indigo-900 font-display font-semibold lg:text-left xl:text-4xl
-                    xl:text-bold ">Educate a Child</h2>
+                    xl:text-bold ">Volunteer</h2>
                         <form id="hook-form" onSubmit={handleSubmit(onSubmit)}>
                             <input type="file"
                                 className=' w-full border-2 bg-white rounded-lg p-2 mt-4'
@@ -105,15 +103,7 @@ function EduHome() {
                                         setImage(event.target.files[0]);
                                     }
                                 }} />
-                            <FormInputComponent
-                                label='Heading'
-                                type='text'
-                                name='heading'
-                                placeholder='Enter the Heading'
-                                control={control}
-                                error={errors?.heading?.message}
-                                required
-                            />
+                            
                             <FormTextInput
                                 label='Content'
                                 type='text'
@@ -149,16 +139,12 @@ function EduHome() {
                                         } />
                                 </div>
                                 <div className='flex justify-center items-center'>
-                                    <h1 className='text-2xl font-bold'>{data?.heading}</h1>
-                                </div>
-                                <div className='flex justify-center items-center'>
                                     <p className='text-xl'>{data?.content}</p>
                                 </div>
                                 <div className='m-2'>
                                 <button className='rounded-lg mx-2 bg-gray text-white w-20 h-8'>Edit</button>
                                 <button className='rounded-lg mx-2 bg-red text-white w-20 h-8' onClick={(e) => deleteEvent(data?.id)}>Delete</button>
                                 </div>
-                                
                             </div>
                         )
                     })
@@ -169,4 +155,4 @@ function EduHome() {
   )
 }
 
-export default EduHome;
+export default Volunteer;

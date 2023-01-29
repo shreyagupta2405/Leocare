@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import Donate from './Donate';
 
 function Stats() {
   useEffect(() => {

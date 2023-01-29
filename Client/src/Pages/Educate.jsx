@@ -16,7 +16,7 @@ function Educate() {
           <div className='text-4xl lg:text-5xl p-4'>Contact Information</div>
           <div className='text-2xl grid place-items-center'>
             <div className='p-2'>Mobile: <br></br> +91 9398695177 / 9550001512 </div>
-            <div className=''><br />Email: <br />leocarefoundation@gmail.com</div>
+            <div className=''><br />Email: <br />support@leocare.org</div>
           </div>
           <div className='text-sm font-sans p-4'> © 2022 Leocare</div>
         </div>

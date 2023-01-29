@@ -27,7 +27,7 @@ function Educate() {
     const validationSchema = yup.object().shape({
         heading: yup.string().required("Required Field"),
         content: yup.string().required(),
-        // email: yup.string().email('Invalid Email').required("Required Field"),
+        // email: yup.string().email('Invalid Email'),
         postDate: yup.string(),
         // image: yup.mixed().required('File is required'),
         //password: yup.string().required("Required Field").min(6)
@@ -43,6 +43,7 @@ function Educate() {
                     "content": data?.content,
                     "date": data?.postDate,
                     "url": url,
+                    // "email": data.email,
                     "timeStamp": new Date()
                 }
             );
@@ -137,6 +138,7 @@ function Educate() {
                                 error={errors?.content?.message}
                                 required
                             />
+                            
                         </form>
                         <div class="mt-10">
                             <button type='submit' form='hook-form' class="bg-indigo-500 text-gray-100 p-4 w-full rounded-full tracking-wide
