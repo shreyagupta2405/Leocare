@@ -25,11 +25,8 @@ function Educate() {
 
 
     const validationSchema = yup.object().shape({
-        
-        // email: yup.string().email('Invalid Email').required("Required Field"),
+        content: yup.string().required(),
        
-        // image: yup.mixed().required('File is required'),
-        //password: yup.string().required("Required Field").min(6)
     });
     const { register, handleSubmit, control, formState: { errors } } = useForm({
         resolver: yupResolver(validationSchema)
@@ -39,6 +36,7 @@ function Educate() {
             await newsService.addEvent(
                 {
                     "url": url,
+                    "content": data?.content,
                 }
             );
 
@@ -104,6 +102,15 @@ function Educate() {
                                         setImage(event.target.files[0]);
                                     }
                                 }} />
+                                <FormTextInput
+                                label='Content'
+                                type='text'
+                                name='content'
+                                placeholder='Enter the Content'
+                                control={control}
+                                error={errors?.content?.message}
+                                required
+                            />
                             
                         </form>
                         <div class="mt-10">
@@ -129,6 +136,9 @@ function Educate() {
                                     <img className='h-56
                                     ' src={data?.url
                                         } />
+                                </div>
+                                <div className='flex justify-center items-center'>
+                                    <p className='text-xl'>{data?.content}</p>
                                 </div>
                                 
                                 <div className='m-2'>

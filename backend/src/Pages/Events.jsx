@@ -26,7 +26,7 @@ function Events() {
 
     const validationSchema = yup.object().shape({
         heading: yup.string().required("Required Field"),
-        content: yup.string().min(10).required(),
+        content: yup.string().required(),
         postDate: yup.string(),
         // image: yup.mixed().required('File is required'),
     });
