@@ -11,26 +11,26 @@ import {
 
 const eventCollectionRef = collection(db, "skill-home");
 class SkillHomeDataService {
-    addEvent = (newEvent) => {
-        console.log(newEvent);
-        return addDoc(eventCollectionRef, newEvent);
+    addSkill = (newSkill) => {
+        console.log(newSkill);
+        return addDoc(eventCollectionRef, newSkill);
     };
 
-    updateEvent = (id, updatedEvent) => {
+    updateSkill = (id, updatedSkill) => {
         const eventDoc = doc(db, "skill-home", id);
-        return updateDoc(eventDoc, updatedEvent);
+        return updateDoc(eventDoc, updatedSkill);
     };
 
-    deleteEvents = (id) => {
+    deleteSkill = (id) => {
         const eventDoc = doc(db, "skill-home", id);
         return deleteDoc(eventDoc);
     };
 
-    getAllEvents = () => {
+    getAllSkill = () => {
         return getDocs(eventCollectionRef);
     };
 
-    getEvent = (id) => {
+    getSkill = (id) => {
         const eventDoc = doc(db, "skill-home", id);
         return getDoc(eventDoc);
     };

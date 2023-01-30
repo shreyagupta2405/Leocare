@@ -5,7 +5,7 @@ import b from '../Components/images/b.png'
 function Training() {
   return (
     <div>
-    <div className='p-6 text-3xl text-primary flex flex-col justify-center items-center'>
+    <div className='p-6 text-3xl text-gray-700 flex flex-col justify-center items-center'>
     Skill Training Batches
     </div>
       

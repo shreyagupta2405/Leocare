@@ -11,28 +11,28 @@ import {
 
 const eventCollectionRef = collection(db, "volunteer");
 class VolunteerDataService {
-    addEvent = (newEvent) => {
-        console.log(newEvent);
-        return addDoc(eventCollectionRef, newEvent);
+    addVolunteer = (newVolunteer) => {
+        console.log(newVolunteer);
+        return addDoc(eventCollectionRef, newVolunteer);
     };
 
-    updateEvent = (id, updatedEvent) => {
+    updateVolunteer = (id, updatedVolunteer) => {
         const eventDoc = doc(db, "volunteer", id);
-        return updateDoc(eventDoc, updatedEvent);
+        return updateDoc(eventDoc, updatedVolunteer);
     };
 
-    deleteEvents = (id) => {
+    deleteVolunteer = (id) => {
         const eventDoc = doc(db, "volunteer", id);
         return deleteDoc(eventDoc);
     };
 
-    getAllEvents = () => {
+    getAllVolunteer = () => {
         return getDocs(eventCollectionRef);
     };
 
-    getEvent = (id) => {
-        const eventDoc = doc(db, "volunteer", id);
-        return getDoc(eventDoc);
+    getVolunteer = (id) => {
+        const VolunteerDoc = doc(db, "volunteer", id);
+        return getDoc(VolunteerDoc);
     };
 }
 

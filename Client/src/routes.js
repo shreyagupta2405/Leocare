@@ -22,7 +22,7 @@ const routes = [
 		component: <Educate/>,
 	},
 	{
-        path: "/skills",
+        path: "/env",
 		component: <Skills/>,
 	},
 	{

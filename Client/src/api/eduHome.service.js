@@ -11,26 +11,26 @@ import {
 
 const eventCollectionRef = collection(db, "edu");
 class EduHomeDataService {
-    addEvent = (newEvent) => {
-        console.log(newEvent);
-        return addDoc(eventCollectionRef, newEvent);
+    addEdu = (newEdu) => {
+        console.log(newEdu);
+        return addDoc(eventCollectionRef, newEdu);
     };
 
-    updateEvent = (id, updatedEvent) => {
+    updateEdu = (id, updatedEdu) => {
         const eventDoc = doc(db, "edu", id);
-        return updateDoc(eventDoc, updatedEvent);
+        return updateDoc(eventDoc, updatedEdu);
     };
 
-    deleteEvents = (id) => {
+    deleteEdu = (id) => {
         const eventDoc = doc(db, "edu", id);
         return deleteDoc(eventDoc);
     };
 
-    getAllEvents = () => {
+    getAllEdu = () => {
         return getDocs(eventCollectionRef);
     };
 
-    getEvent = (id) => {
+    getEdu = (id) => {
         const eventDoc = doc(db, "edu", id);
         return getDoc(eventDoc);
     };

@@ -17,7 +17,6 @@ import {
 import { toast } from "react-toastify";
 import { toastArray } from '../Components/Toast'
 import skillhomeService from '../api/skillhome.service'
-import eduHomeService from '../api/eduHome.service'
 
 
 function SkillHome() {
