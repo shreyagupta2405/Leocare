@@ -30,11 +30,12 @@ useEffect(() => {
     Our Impact On the Environment
     </div>
       
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
+    <div >
 
-      {eventData?.map((data) => {
+      {eventData?<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">{
+        eventData?.map((data) => {
         return(
-          <div className='justify-center items-center flex py-8'>
+          <div className='justify-center items-center flex py-8 '>
         <Blog
           title={data?.heading}
           imageUrl={data?.url}
@@ -45,6 +46,9 @@ useEffect(() => {
         )
         
       }) 
+      }</div>:
+      <div>No Events to Display</div>
+        
       }
       
     </div>

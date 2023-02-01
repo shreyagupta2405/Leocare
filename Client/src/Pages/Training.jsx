@@ -29,10 +29,10 @@ function Training() {
     Skill Training Batches
     </div>
       
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
-{   eventData?.map((data) => {
+    <div >
+{ eventData?<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">{eventData?.map((data) => {
   return(
-    <div className='justify-center items-center flex'>
+    <div className='justify-center items-center flex py-8'>
   <Blog
     title={data?.heading}
     imageUrl={data?.url}
@@ -42,7 +42,9 @@ function Training() {
 </div>
   )
   
-})
+})}</div>:
+<div><h4>No Events to Display</h4></div>
+  
 }
 
       </div>

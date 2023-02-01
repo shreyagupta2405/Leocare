@@ -30,9 +30,10 @@ useEffect(() => {
       <div className='p-6 text-4xl text-gray-700 flex flex-col justify-center items-center'>
         Educate a Child
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
+      <div >
 
-      {eventData?.map((data) => {
+      { eventData?<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">{
+        eventData?.map((data) => {
         return(
           <div className='justify-center items-center flex py-8'>
           <Blog
@@ -43,7 +44,10 @@ useEffect(() => {
           />
         </div>
         )
-      }) }
+      }) 
+      }</div>:
+      <div><h4>No Events to Display</h4></div>
+        }
 
       
       </div>

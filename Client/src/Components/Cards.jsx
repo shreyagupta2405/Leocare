@@ -65,6 +65,7 @@ const getAllEventFromStore3 = async () => {
   }
 }
 
+
   useEffect(() => {
     getAllEventFromStore()
     getAllEventFromStore2()
@@ -78,7 +79,7 @@ const getAllEventFromStore3 = async () => {
                 </div>
     <div  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
       
-     { eventData?.map((data) => {
+     { eventData?<div>{eventData.slice(0,1)?.map((data) => {
       return (
         <div className='justify-center items-center flex'>
         <Card
@@ -89,22 +90,27 @@ const getAllEventFromStore3 = async () => {
         />
         </div>
        )
-       })
+       })}</div>:
+       <div><h4>No Events to Display</h4></div>
+      
       }
-      { VolunteerData?.map((data) => {
+      { VolunteerData?<div>{VolunteerData.slice(0,1)?.map((data) => {
       return (
         <div className='justify-center items-center flex'>
         <Card
-          link=''
+          link='https://docs.google.com/forms/d/e/1FAIpQLSe7N5x_2RHfwKiDIQeOS73F5yvHc0n_z1E0aT12Nk03HZ55-Q/viewform'
           title='Volunteer'
+          target='_blank'
           imageUrl={data?.url}
           body={data?.content}
         />
         </div>
        )
-       })
+       })}</div>:
+       <div><h4>No Events to Display</h4></div>
+        
       }
-      { SkillData?.map((data) => {
+      { SkillData?<div>{SkillData.slice(0,1)?.map((data) => {
       return (
         <div className='justify-center items-center flex'>
         <Card
@@ -115,7 +121,9 @@ const getAllEventFromStore3 = async () => {
         />
         </div>
        )
-       })
+       })}</div>:
+       <div><h4>No Events to Display</h4></div>
+        
       }
       
       

@@ -5,11 +5,11 @@ import FormTextInput from '../Components/FormTextInput'
 import { auth, storage, db } from '../firebaseConfig'
 import { v4 } from 'uuid'
 import {
-    ref,
-    uploadBytes,
-    getDownloadURL,
-    listAll,
-    list,
+  ref,
+  uploadBytes,
+  getDownloadURL,
+  listAll,
+  list,
 } from "firebase/storage";
 import newsService from '../api/news.service'
 import img1 from './images2/news1.jpeg';
@@ -26,16 +26,16 @@ function Articles() {
 
   const getAllEventFromStore = async () => {
     try {
-        const data = await newsService.getAllEvents()
-        let arr = []
-        data.forEach((doc) => {
-            arr.push({...doc.data(), id: doc.id})
-        })
-        setEventData(arr)
+      const data = await newsService.getAllEvents()
+      let arr = []
+      data.forEach((doc) => {
+        arr.push({ ...doc.data(), id: doc.id })
+      })
+      setEventData(arr)
     } catch (err) {
-        console.log(err);
+      console.log(err);
     }
-}
+  }
   useEffect(() => {
     getAllEventFromStore()
   }, [])
@@ -48,19 +48,24 @@ function Articles() {
       </div>
 
       <div className='flex flex-col items-center justify-center'>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 '>
+        <div >
 
-          {eventData?.map((data) => {
-            return(
-              <div className='p-4 m-8 justify-center items-center'>
-                <img className='w-96 p-4' src={data?.url}></img>
-                <div className='my-4 p-4 rounded-lg shadow-lg hover:shadow-2xl text-gray-500'>
-                <div className='text-center text-xl text-black '>Description</div>
-                  <div className='text-center'>{data?.content}</div>
-                </div>
-            </div>
-            )
-          }) }
+          {
+            eventData ? <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 '>{
+              eventData?.map((data) => {
+                return (
+                  <div className='p-4 m-8 justify-center items-center'>
+                    <img className='w-96 p-4' src={data?.url}></img>
+                    <div className='my-4 p-4 rounded-lg shadow-lg hover:shadow-2xl text-gray-500'>
+                      <div className='text-center text-xl text-black '>Description</div>
+                      <div className='text-center'>{data?.content}</div>
+                    </div>
+                  </div>
+                )
+              })
+            }</div> :
+              <div><h4>No Events to Display</h4></div>
+          }
 
         </div>
       </div>

@@ -5,9 +5,7 @@ import img2 from './images/env.jpeg'
 import img3 from './images/healthcamp2.jpeg'
 import img4 from './images/healthcamp.jpeg'
 import { useState, useEffect } from 'react'
-// import { yupResolver } from '@hookform/resolvers/yup'
-// import * as yup from 'yup'
-// import { useForm } from 'react-hook-form'
+
 
 import eventsService from '../api/events.service'
 import eduHomeService from '../api/eduHome.service'
@@ -45,7 +43,7 @@ function Events() {
     }
   }
 
-
+  
   useEffect(() => {
     getAllEventFromStore();
     getAllEventFromStore2();
@@ -61,8 +59,7 @@ function Events() {
 
         {/* 1st card */}
         {/* {console.log(eventData)} */}
-        {
-          eventData?.map((data, key) => {
+        { eventData?<div>{eventData.slice(0,3)?.map((data, key) => {
             return (
               <div key={key} className='text-center lg:text-left grid sm:grid-cols-1 lg:grid-cols-2 p-8 '>
                 <div className='mx-auto'>
@@ -79,7 +76,8 @@ function Events() {
 
               </div>
             )
-          })
+          })}</div>:
+          <div><h4>NO Events to show, Please wait</h4></div>
         }
 
         {/* end of cards section */}
@@ -93,7 +91,7 @@ function Events() {
         <div className='text-4xl text-gray-700 font-extrabold p-4 text-left'>Educate a Child</div>
         <div className='bg-gray-100 m-2 pt-2 mt-10 '>
           {/* <div className='grid sm:grid-cols-1 lg:grid-cols-2 m-10'> */}
-            {eduData?.map((data, key) => {
+            {eduData?<div>{eduData.slice(0,1)?.map((data, key) => {
               return (
                 <div className='flex flex-row p-8' key={key}>
                   <div><img src={data?.url} className='h-80' ></img></div>
@@ -110,7 +108,9 @@ function Events() {
                 </div>
               )
 
-            })
+            })}</div>:
+            <div><h4>No Events to display</h4></div>
+              
 
             }
             {/* <div className=''>
