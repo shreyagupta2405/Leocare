@@ -12,7 +12,7 @@ function NavBar() {
     <div className=" flex flex-wrap mt-4 items-center justify-between mx-auto ">
         <a className="flex items-center">
             
-            <h1 className="text-primary font-bold text-[2rem]">Leocare</h1>
+            <h1 className="text-primary font-bold text-[2rem]">Leocare Foundation</h1>
         </a>
         <button data-collapse-toggle="navbar-default" type="button" className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
             <span className="sr-only">Open main menu</span>
