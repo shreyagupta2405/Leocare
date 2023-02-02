@@ -14,6 +14,10 @@ function Home() {
         <Link to='/news' className='hover:text-primary h-24 flex justify-center items-center hover:scale-90 rounded-lg m-8 shadow-xl'>News Articles</Link>
         <Link to='/skills' className='hover:text-primary h-24 flex justify-center items-center hover:scale-90 rounded-lg m-8 shadow-xl'>Skill Development</Link> 
       </div>
+
+      <div className='items-center justify-center grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 p-4 text-xl'>
+        <Link to='docs' className='hover:text-primary h-24 flex justify-center items-center hover:scale-90 rounded-lg m-8 shadow-xl' >Financial Docs</Link>
+      </div>
       
       <Footer />
     </div>

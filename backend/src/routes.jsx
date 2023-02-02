@@ -11,6 +11,7 @@ const News = React.lazy(() => import("./Pages/News"));
 const Skills = React.lazy(() => import("./Pages/Skills"));
 const SkillHome = React.lazy(() => import("./Pages/SkillHome"));
 const Volunteer = React.lazy(() => import("./Pages/Volunteer"));
+const Docs = React.lazy(() => import("./Pages/Docs"));
 
 const routes = [
     {
@@ -66,6 +67,11 @@ const routes = [
     {
         path: "/volunteer",
         component: <Volunteer/>,
+        privateRoute: true
+    },
+    {
+        path: "/docs",
+        component: <Docs/>,
         privateRoute: true
     }
 ];

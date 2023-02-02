@@ -122,7 +122,7 @@ function Footer() {
                             <a
                             className="flex justify-center items-center text-gray-800 transition hover:text-gray-800/75"
                                 href="/docs"
-                                target="_blank"
+                                target=""
                                 rel="noreferrer">
                              <GrDocument size={22}/>
                             </a>
