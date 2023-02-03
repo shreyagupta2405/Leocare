@@ -89,7 +89,7 @@ function Events() {
       {/* {console.log(eduData)} */}
       <div>
         <div className='text-4xl text-gray-700 font-extrabold p-4 text-left'>Educate a Child</div>
-        <div className='bg-gray-100 m-2 pt-2 mt-10 '>
+        <div className='bg-gray-100 shadow-lg  m-2 pt-2 mt-10 '>
           {/* <div className='grid sm:grid-cols-1 lg:grid-cols-2 m-10'> */}
             {eduData?<div>{eduData.slice(0,1)?.map((data, key) => {
               return (

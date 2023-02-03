@@ -1,6 +1,7 @@
 import React from 'react'
 import Blog from '../Components/Blog'
 import { useState, useEffect } from 'react'
+import {AiOutlineInfoCircle} from 'react-icons/ai'
 
 import docsService from '../api/docs.service'
 
@@ -34,7 +35,9 @@ useEffect(() => {
 
           <div className='text-sm flex flex-col shadow-xl p-5 justify-center items-center rounded-lg'>
             
-            <a target='_blank' className=' text-lg rounded-lg w-36 h-10 bg-purple-500 text-white text-center flex justify-center items-center hover:bg-purple-700' href={data?.url}>View pdf</a>
+            <a target='_blank' className='hover:scale-90 text-lg rounded-lg w-36 h-10 bg-purple-500 text-white text-center flex justify-center items-center hover:bg-purple-700' href={data?.url}>
+                <AiOutlineInfoCircle className='m-1' />
+                  View pdf</a>
             <div className='text-lg p-3'>{data?.content}</div>
           </div>
           

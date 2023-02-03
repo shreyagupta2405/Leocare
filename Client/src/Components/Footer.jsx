@@ -11,6 +11,7 @@ import {AiFillHome} from 'react-icons/ai'
 import {BsFillTelephonePlusFill} from 'react-icons/bs'
 import {GrDocument} from 'react-icons/gr'
 import { MdEmail } from 'react-icons/md'
+import { AiFillFilePdf } from 'react-icons/ai'
 
 function Footer() {
     return (
@@ -120,11 +121,11 @@ function Footer() {
                              <BsYoutube className='mt-1' size={30}/> 
                             </a>
                             <a
-                            className="flex justify-center items-center text-gray-800 transition hover:text-gray-800/75"
+                            className="flex justify-center items-center text-gray-700 transition hover:text-gray-800/75"
                                 href="/docs"
                                 target=""
                                 rel="noreferrer">
-                             <GrDocument size={22}/>
+                             <AiFillFilePdf className='mt-1' size={27}/>
                             </a>
 
                             

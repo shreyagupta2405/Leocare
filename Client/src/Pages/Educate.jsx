@@ -3,6 +3,8 @@ import Blogs from '../Components/Blogs';
 import Blog from '../Components/Blog';
 import img from '../Components/images/kid.png'
 import { useState, useEffect } from 'react'
+import {MdEmail} from 'react-icons/md'
+import {BsFillTelephoneOutboundFill} from 'react-icons/bs'
 
 import educateService from '../api/educate.service'
 
@@ -56,10 +58,11 @@ useEffect(() => {
         <div className='grid place-items-center bg-white font-serif text-center text-gray-700'>
           <div className='text-4xl lg:text-5xl p-4'>Contact Information</div>
           <div className='text-2xl grid place-items-center'>
-            <div className='p-2'>Mobile: <br></br> +91 9398695177 / 9550001512 </div>
-            <div className=''><br />Email: <br />support@leocare.org</div>
+            <div className='p-4'><div className='flex flex-row items-center justify-center gap-3'><BsFillTelephoneOutboundFill />Mobile: </div> +91 9398695177 / 9550001512 </div>
+
+            <div className='pt-4'><div className='flex flex-row items-center justify-center gap-2'><MdEmail /> Email: </div>support@leocare.org</div>
           </div>
-          <div className='text-sm font-sans p-4'> © 2022 Leocare</div>
+          <div className='text-sm font-sans p-4'> © 2022 Leocare Foundation</div>
         </div>
         <div className='text-center'>
         <img src={img} className=' w-full'></img>
