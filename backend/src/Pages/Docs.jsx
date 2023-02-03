@@ -99,8 +99,9 @@ function Docs() {
                         <h2 class="text-center text-4xl text-indigo-900 font-display font-semibold lg:text-left xl:text-2xl
                     xl:text-bold ">Financial Docs of Leocare Foundation</h2>
                         <form id="hook-form" onSubmit={handleSubmit(onSubmit)}>
+                        <div className='text-xl mt-2'>Upload Pdf</div>
                             <input type="file" placeholder='upload pdf'
-                                className=' w-full border-2 bg-white rounded-lg p-2 mt-4'
+                                className=' w-full border-2 bg-white rounded-lg p-2 mt-3'
                                 onChange={(event) => {
                                     if (event.target.files[0]) {
                                         setImage(event.target.files[0]);
