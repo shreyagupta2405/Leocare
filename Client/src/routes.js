@@ -1,7 +1,7 @@
 import React from "react";
 
 const Home = React.lazy(() => import("./Pages/Home"));;
-const SignUp = React.lazy(() => import("./Pages/SignUp"));
+const SignUp = React.lazy(() => import("./Pages/Signup.jsx"));
 const Educate = React.lazy(() => import("./Pages/Educate"));
 const Skills = React.lazy(() => import("./Pages/Env"));
 const Training = React.lazy(() => import("./Pages/Training"));
