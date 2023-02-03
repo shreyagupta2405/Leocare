@@ -54,7 +54,7 @@ function Articles() {
             eventData ? <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 '>{
               eventData?.map((data) => {
                 return (
-                  <div className='p-4 m-8 justify-center items-center'>
+                  <div className='p-4 m-8 justify-center  items-center'>
                     <img className='w-96 p-4' src={data?.url}></img>
                     <div className='my-4 p-4 rounded-lg shadow-lg hover:shadow-2xl text-gray-500'>
                       <div className='text-center text-xl text-black '>Description</div>
