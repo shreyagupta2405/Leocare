@@ -39,12 +39,9 @@ function Educate() {
         try {
             await educateService.addEvent(
                 {
-                    "heading": data?.heading,
                     "content": data?.content,
                     "date": data?.postDate,
                     "url": url,
-                    // "email": data.email,
-                    "timeStamp": new Date()
                 }
             );
 

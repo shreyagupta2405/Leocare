@@ -17,6 +17,12 @@ function Home() {
 
       <div className='items-center justify-center grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 p-4 text-xl'>
         <Link to='docs' className='hover:text-primary h-24 flex justify-center items-center hover:scale-90 rounded-lg m-8 shadow-xl' >Financial Docs</Link>
+        <Link to='about' className='hover:text-primary h-24 flex justify-center items-center hover:scale-90 rounded-lg m-8 shadow-xl' >About/Home</Link>
+      </div>
+
+      <div className='items-center justify-center grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 p-4 text-xl'>
+        <Link to='elderlyCare' className='hover:text-primary h-24 flex justify-center items-center hover:scale-90 rounded-lg m-8 shadow-xl' >Elderly Care/Home</Link>
+        <Link to='empowerment' className='hover:text-primary h-24 flex justify-center items-center hover:scale-90 rounded-lg m-8 shadow-xl' >Women Empowerment/Home</Link>
       </div>
       
       <Footer />

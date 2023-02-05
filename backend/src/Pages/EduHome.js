@@ -24,7 +24,6 @@ function EduHome() {
     const [eventData, setEventData] = useState([]);
 
     const validationSchema = yup.object().shape({
-        heading: yup.string().required("Required Field"),
         content: yup.string().required(),
     });
 
@@ -36,7 +35,6 @@ function EduHome() {
         try {
             await eduHomeService.addEvent(
                 {
-                    "heading": data?.heading,
                     "content": data?.content,
                     "url": url,
                 }
@@ -105,15 +103,7 @@ function EduHome() {
                                         setImage(event.target.files[0]);
                                     }
                                 }} />
-                            <FormInputComponent
-                                label='Heading'
-                                type='text'
-                                name='heading'
-                                placeholder='Enter the Heading'
-                                control={control}
-                                error={errors?.heading?.message}
-                                required
-                            />
+                            
                             <FormTextInput
                                 label='Content'
                                 type='text'
@@ -136,7 +126,6 @@ function EduHome() {
 
             </div>
             <div className='text-black text-center grid place-items-center p-4 w-1/2'>
-
                 {
                     eventData &&
                     eventData.map((data) => {
@@ -147,9 +136,6 @@ function EduHome() {
                                     <img className='h-36
                                     ' src={data?.url
                                         } />
-                                </div>
-                                <div className='flex justify-center items-center'>
-                                    <h1 className='text-2xl font-bold'>{data?.heading}</h1>
                                 </div>
                                 <div className='flex justify-center items-center'>
                                     <p className='text-xl'>{data?.content}</p>
@@ -165,7 +151,6 @@ function EduHome() {
                 }
             </div>
         </div>
-            
   )
 }
 
