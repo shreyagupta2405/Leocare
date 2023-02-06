@@ -18,8 +18,9 @@ function team() {
                     </div>
                     <div className='text-center font-extrabold' >
                         <h3 className='text-xl font-bold tracking-tight text-gray-900 dark:text-white'>
-                            Latha <br></br>
-                            U Durga Padma Latha
+                        UDP Latha<br></br>
+U Durga Padma Latha 
+                            
                         </h3> <br></br>
                         <h3 className='text-center text-gray-500 dark:text-gray-400'>
                             President <br></br>

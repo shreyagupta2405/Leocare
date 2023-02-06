@@ -9,6 +9,13 @@ import Events from '../Components/Events';
 import h1 from "../Components/images/home1.jpg";
 import h2 from "../Components/images/home2.jpg";
 import h3 from "../Components/images/home3.png";
+import h4 from "../Components/images/home4.jpeg";
+import h5 from "../Components/images/home5.jpeg";
+import h6 from "../Components/images/home6.jpeg";
+import h7 from "../Components/images/home7.jpeg";
+import h8 from "../Components/images/home8.jpeg";
+import h9 from "../Components/images/home9.jpeg";
+import h10 from "../Components/images/home10.jpeg";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
 
@@ -21,7 +28,7 @@ function Home() {
             <div className="flex flex-col">
                 <div>
                     <div id="carouselExampleCaptions" className=" carousel slide relative w-full " data-bs-ride="carousel">
-                        <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center  mb-4">
+                        <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center mb-4">
                             <button
                                 type="button"
                                 data-bs-target="#carouselExampleCaptions"
@@ -42,11 +49,24 @@ function Home() {
                                 data-bs-slide-to="2"
                                 aria-label="Slide 3"
                             ></button>
+                            <button
+                                type="button"
+                                data-bs-target="#carouselExampleCaptions"
+                                data-bs-slide-to="3"
+                                aria-label="Slide 4"
+                            ></button>
+                            <button
+                                type="button"
+                                data-bs-target="#carouselExampleCaptions"
+                                data-bs-slide-to="4"
+                                aria-label="Slide 5"
+                            ></button>
+                            
                         </div>
                         <div className="carousel-inner relative w-full overflow-hidden">
                             <div className="carousel-item active relative float-left w-full">
                                 <img
-                                    src={h1}
+                                    src={h6}
                                     className="block rounded-lg w-full h-full"
                                     alt="..."
                                 />
@@ -57,7 +77,18 @@ function Home() {
                             </div>
                             <div className="carousel-item relative float-left w-full">
                                 <img
-                                    src={h2}
+                                    src={h9}
+                                    className="block rounded-lg w-full h-full"
+                                    alt="..."
+                                />
+                                <div className="carousel-caption hidden md:block absolute text-center">
+                                <h5 className="text-4xl">Show you care, change their world</h5>
+                                </div>
+                            </div>
+
+                            <div className="carousel-item relative float-left w-full">
+                                <img
+                                    src={h10}
                                     className="block rounded-lg w-full h-full"
                                     alt="..."
                                 />
@@ -67,7 +98,7 @@ function Home() {
                             </div>
                             <div className="carousel-item relative float-left w-full">
                                 <img
-                                    src={h3}
+                                    src={h4}
                                     className="block rounded-lg w-full h-full"
                                     alt="..."
                                 />
@@ -75,6 +106,18 @@ function Home() {
                                 <h5 className="text-4xl">Show you care, change their world</h5>
                                 </div>
                             </div>
+                            <div className="carousel-item relative float-left w-full">
+                                <img
+                                    src={h5}
+                                    className="block rounded-lg w-full h-full"
+                                    alt="..."
+                                />
+                                <div className="carousel-caption hidden md:block absolute text-center">
+                                <h5 className="text-4xl">Show you care, change their world</h5>
+                                </div>
+                            </div>
+                            
+                            
                         </div>
                         <button
                             className="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
