@@ -15,6 +15,7 @@ const Docs = React.lazy(() => import("./Pages/Docs"));
 const About = React.lazy(() => import("./Pages/About"));
 const ElderlyHome = React.lazy(() => import("./Pages/ElderlyHome"));
 const EmpowerHome = React.lazy(() => import("./Pages/EmpowerHome"));
+const Team = React.lazy(() => import("./Pages/Team"));
 
 const routes = [
     {
@@ -90,6 +91,11 @@ const routes = [
     {
         path: "/empowerment",
         component: <EmpowerHome/>,
+        privateRoute: true
+    },
+    {
+        path: "/team",
+        component: <Team/>,
         privateRoute: true
     },
 

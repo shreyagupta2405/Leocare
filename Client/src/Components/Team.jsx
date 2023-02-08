@@ -1,9 +1,31 @@
 import React from 'react'
 import img from "./images/team1.jpg";
 import img2 from './images/team2.png'
+import { useState, useEffect } from 'react'
 import './team.css'
+import teamService from '../api/team.service'
 
-function team() {
+function Team() {
+    const [image, setImage] = useState(null);
+    const [eventData, setEventData] = useState([]);
+
+    const getAllEventFromStore = async () => {
+        try {
+            const data = await teamService.getAllEvents()
+            let arr = []
+            data.forEach((doc) => {
+                arr.push({...doc.data(), id: doc.id})
+            })
+            setEventData(arr)
+        } catch (err) {
+            console.log(err);
+        }
+    }
+
+    useEffect(() => {
+        getAllEventFromStore()
+    }, [])
+
     return (
         <div className='bg-purple-100 block justify-center'>
             <div className='text-primary font-semibold lg:text-[2rem] 
@@ -14,7 +36,7 @@ function team() {
             <div className='p-2'>
             <div className='justify-center block p-4'>
                     <div className='flex justify-center'>
-                        <img id='team' className='mx-auto mb-4 w-36 h-36' src={img}></img>
+                        <img id='team' className='mx-auto w-36 h-36 rounded-full' src={img}></img>
                     </div>
                     <div className='text-center font-extrabold' >
                         <h3 className='text-xl font-bold tracking-tight text-gray-900 dark:text-white'>
@@ -30,78 +52,46 @@ U Durga Padma Latha
                 </div>
             </div>
 
-
+            {eventData ? <div className="justify-center items-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 p-4 mx-20 ">{
+          eventData?.map((data) => {
+            return (
+                <div className='justify-center block p-4'>
+                    <div className='flex justify-center'>
+                        <img id='team' className='mx-auto  w-36 h-36 rounded-full' src={data.url}></img>
+                    </div>
+                    <div className='text-center font-extrabold' >
+                        <h3 className='text-xl font-bold tracking-tight text-gray-900 dark:text-white'>
+                            {data.name} <br></br>
+                            U Durga Padma Latha
+                        </h3> <br></br>
+                        <h3 className='text-center text-gray-500 dark:text-gray-400'>
+                            {data.heading} <br></br>
+                            {data.designation}<br></br>
+                        </h3>
+                    </div>
+                </div>
+            )
+          })
+        }</div> :
+          <div><h4>No Events to Display</h4></div>
+        }
             
 
 
-            <div className='justify-center items-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 p-4 mb-12 mx-20'>
+            <div className='justify-center items-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 p-4  mx-20'>
 
-                <div className='justify-center block p-4'>
-                    <div className='flex justify-center'>
-                        <img id='team' className='mx-auto mb-4 w-36 h-36' src={img}></img>
-                    </div>
-                    <div className='text-center font-extrabold' >
-                        <h3 className='text-xl font-bold tracking-tight text-gray-900 dark:text-white'>
-                            Latha <br></br>
-                            U Durga Padma Latha
-                        </h3> <br></br>
-                        <h3 className='text-center text-gray-500 dark:text-gray-400'>
-                            President <br></br>
-                            Founder | CEO <br></br>
-                        </h3>
-                    </div>
-                </div>
+                
 
-                <div className='justify-center block p-4'>
-                    <div className='flex justify-center'>
-                        <img id='team' className='mx-auto mb-4 w-36 h-36 ' src={img2}></img>
-                    </div>
-                    <div className='text-center font-extrabold' >
-                        <h3 className='text-xl font-bold tracking-tight text-gray-900 dark:text-white'>
-                            Viswa Jyothi
-                        </h3> <br></br>
-                        <h3 className='text-center text-gray-500 dark:text-gray-400'>
-                            Vice President <br></br>
-                            | Compliance | <br></br>
-                        </h3>
-                    </div>
-                </div>
-                <div className='justify-center block p-4'>
-                    <div className='flex justify-center'>
-                        <img id='team' className='mx-auto mb-4 w-36 h-36' src={img2}></img>
-                    </div>
-                    <div className='text-center font-extrabold' >
-                        <h3 className='text-xl font-bold tracking-tight text-gray-900 dark:text-white'>
-                            Viswa Jyothi
-                        </h3> <br></br>
-                        <h3 className='text-center text-gray-500 dark:text-gray-400'>
-                            Vice President <br></br>
-                            | Compliance | <br></br>
-                        </h3>
-                    </div>
-                </div>
-                <div className='justify-center block p-4'>
-                    <div className='flex justify-center'>
-                        <img id='team' className='mx-auto mb-4 w-36 h-36' src={img}></img>
-                    </div>
-                    <div className='text-center font-extrabold' >
-                        <h3 className='text-xl font-bold tracking-tight text-gray-900 dark:text-white'>
-                            Latha <br></br>
-                            U Durga Padma Latha
-                        </h3> <br></br>
-                        <h3 className='text-center text-gray-500 dark:text-gray-400'>
-                            President <br></br>
-                            Founder | CEO <br></br>
-                        </h3>
-                    </div>
-                </div>
+                
+                
+                
 
             </div>
         </div>
     );
 }
 
-export default team;
+export default Team;
 
 // function team() {
 //     return (
