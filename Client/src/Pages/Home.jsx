@@ -66,7 +66,7 @@ function Home() {
                         <div className="carousel-inner relative w-full overflow-hidden">
                             <div className="carousel-item active relative float-left w-full">
                                 <img
-                                    src={h6}
+                                    src={h10}
                                     className="block rounded-lg w-full h-full"
                                     alt="..."
                                 />
@@ -77,7 +77,7 @@ function Home() {
                             </div>
                             <div className="carousel-item relative float-left w-full">
                                 <img
-                                    src={h9}
+                                    src={h7}
                                     className="block rounded-lg w-full h-full"
                                     alt="..."
                                 />
@@ -88,7 +88,7 @@ function Home() {
 
                             <div className="carousel-item relative float-left w-full">
                                 <img
-                                    src={h10}
+                                    src={h5}
                                     className="block rounded-lg w-full h-full"
                                     alt="..."
                                 />
@@ -106,7 +106,7 @@ function Home() {
                                 <h5 className="text-4xl">Show you care, change their world</h5>
                                 </div>
                             </div>
-                            <div className="carousel-item relative float-left w-full">
+                            {/* <div className="carousel-item relative float-left w-full">
                                 <img
                                     src={h5}
                                     className="block rounded-lg w-full h-full"
@@ -115,7 +115,7 @@ function Home() {
                                 <div className="carousel-caption hidden md:block absolute text-center">
                                 <h5 className="text-4xl">Show you care, change their world</h5>
                                 </div>
-                            </div>
+                            </div> */}
                             
                             
                         </div>

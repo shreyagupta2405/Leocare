@@ -106,7 +106,7 @@ function Cards() {
   return (
     <div id='cards'>
       <div className='text-gray-700 font-semibold lg:text-[2rem] text-[1.4rem] my-6 text-center'>
-        Our Impact
+        What We Do
       </div>
       <div className="my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
         {empowerData ? <div>{empowerData.slice(0, 1)?.map((data) => {

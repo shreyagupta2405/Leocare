@@ -1,8 +1,8 @@
 import React from 'react'
 import Blog from '../Components/Blog';
-import b from '../Components/images/b.png'
 import { useState, useEffect } from 'react'
 import environmentService from '../api/environment.service'
+
 
 function Env() {
   const [eventData, setEventData] = useState([]);
@@ -48,8 +48,6 @@ function Env() {
         }
 
       </div>
-
-
     </div>
   )
 }

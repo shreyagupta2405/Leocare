@@ -41,7 +41,7 @@ function Team() {
                     <div className='text-center font-extrabold' >
                         <h3 className='text-xl font-bold tracking-tight text-gray-900 dark:text-white'>
                         UDP Latha<br></br>
-U Durga Padma Latha 
+                        U Durga Padma Latha 
                             
                         </h3> <br></br>
                         <h3 className='text-center text-gray-500 dark:text-gray-400'>
@@ -78,15 +78,7 @@ U Durga Padma Latha
             
 
 
-            <div className='justify-center items-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 p-4  mx-20'>
-
-                
-
-                
-                
-                
-
-            </div>
+            
         </div>
     );
 }
