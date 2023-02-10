@@ -28,10 +28,10 @@ useEffect(() => {
     <div className=' p-4 mt-6 bg-purple-200 '>
       <div className='justify-center items-center mt-6'>
         {/* <h1 className='text-3xl font-extrabold flex justify-center items-center text-gray-800'>The Leocare Organization</h1> */}
-        <h1 className=' flex justify-center items-center text-3xl text-center mt-2 text-gray-600 font-extrabold'>
+        <h1 className=' flex justify-center items-center text-3xl text-center mt-2  font-extrabold'>
           The Leocare Foundation
         </h1>
-        <h3 className=' flex flex-row justify-center items-center text-center mt-2 text-gray-600'>
+        <h3 className=' flex flex-row justify-center items-center text-center mt-2 '>
         {
         eventData.slice(0, 1)?.map((data) => {
         return(

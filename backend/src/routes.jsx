@@ -4,7 +4,7 @@ const Home = React.lazy(() => import('./Pages/Home'));
 const SignIn = React.lazy(() => import("./Pages/SignIn"));
 const EduHome = React.lazy(() => import("./Pages/EduHome"));
 const Events = React.lazy(() => import("./Pages/Events"));
-const Env = React.lazy(() => import("./Pages/Env"));
+const Env = React.lazy(() => import("./Pages/EnvHome"));
 const Educate = React.lazy(() => import("./Pages/Educate"));
 const Environment = React.lazy(() => import("./Pages/Environment"));
 const News = React.lazy(() => import("./Pages/News"));
@@ -18,6 +18,9 @@ const EmpowerHome = React.lazy(() => import("./Pages/EmpowerHome"));
 const Team = React.lazy(() => import("./Pages/Team"));
 const ElderlyCare = React.lazy(() => import("./Pages/ElderlyCare"));
 const Empowerment = React.lazy(() => import("./Pages/Empowerment"));
+const Banner = React.lazy(() => import("./Pages/Banner"));
+const EventsMainPage = React.lazy(() => import("./Pages/EventsPage"));
+const TeamMainPage = React.lazy(() => import("./Pages/TeamPage"));
 
 const routes = [
     {
@@ -108,6 +111,21 @@ const routes = [
     {
         path: "/empowerment",
         component: <Empowerment/>,
+        privateRoute: true
+    },
+    {
+        path: "/banner",
+        component: <Banner/>,
+        privateRoute: true
+    },
+    {
+        path: "/eventsPage",
+        component: <EventsMainPage/>,
+        privateRoute: true
+    },
+    {
+        path: "/teamPage",
+        component: <TeamMainPage/>,
         privateRoute: true
     },
 

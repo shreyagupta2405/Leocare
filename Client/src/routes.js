@@ -9,6 +9,8 @@ const Articles = React.lazy(() => import("./Pages/Articles"));
 const Docs = React.lazy(() => import("./Pages/Docs"));
 const Elder = React.lazy(() => import("./Pages/Elder"));
 const Empower = React.lazy(() => import("./Pages/Empower"));
+const EventsPage = React.lazy(() => import("./Pages/EventsPage"));
+const TeamsPage = React.lazy(() => import("./Pages/TeamsPage"));
 
 const routes = [ 
 	{
@@ -46,6 +48,14 @@ const routes = [
 	{
         path: "/empowerment",
 		component: <Empower/>,
+	},
+	{
+        path: "/events",
+		component: <EventsPage/>,
+	},
+	{
+        path: "/team",
+		component: <TeamsPage/>,
 	},
 
 	

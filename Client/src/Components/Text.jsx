@@ -6,7 +6,7 @@ function Text({title, body}) {
       <div className='card-title my-8 '>
         <h3 className='font-extrabold text-center text-xl'>{title}
          </h3>
-         <div className='card-body text-center text-gray-500 mt-6 m-2'>
+         <div className='card-body text-center  mt-6 m-2'>
             {body}
          </div>
       </div>

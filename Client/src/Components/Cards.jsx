@@ -1,16 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import FormInputComponent from '../Components/FormInputComponent'
-import FormTextInput from '../Components/FormTextInput'
-import { auth, storage, db } from '../firebaseConfig'
-import { v4 } from 'uuid'
-import {
-  ref,
-  uploadBytes,
-  getDownloadURL,
-  listAll,
-  list,
-} from "firebase/storage";
+
 import envHomeService from '../api/envHome.service'
 import volunteerService from '../api/volunteer.service'
 import skillhomeService from '../api/skillhome.service'
@@ -19,10 +9,6 @@ import elderHomeService from '../api/elderHome.service'
 import empowerHomeService from '../api/empowerHome.service'
 
 import Card from './Card'
-import img1 from "./images/envv.jpg";
-import img2 from "./images/skill.jpg";
-import imgv from './images/volunteer.jpeg';
-import img3 from "./images/kid.png";
 
 function Cards() {
   const [eventData, setEventData] = useState([]);
@@ -104,8 +90,8 @@ function Cards() {
   }, [])
 
   return (
-    <div id='cards'>
-      <div className='text-gray-700 font-semibold lg:text-[2rem] text-[1.4rem] my-6 text-center'>
+    <div id='whatWeDo'>
+      <div className=' font-semibold lg:text-[2rem] text-[1.4rem] my-6 text-center'>
         What We Do
       </div>
       <div className="my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">

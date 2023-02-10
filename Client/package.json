@@ -6,6 +6,8 @@
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+    "@headlessui/react": "^1.7.10",
+    "@heroicons/react": "^2.0.15",
     "@hookform/resolvers": "^2.9.10",
     "@mui/material": "^5.10.17",
     "@testing-library/jest-dom": "^5.16.5",
@@ -13,6 +15,7 @@
     "@testing-library/user-event": "^13.5.0",
     "firebase": "^9.16.0",
     "flowbite": "^1.5.5",
+    "heroicons-react": "^1.4.1",
     "react": "^18.2.0",
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^18.2.0",

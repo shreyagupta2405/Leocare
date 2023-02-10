@@ -51,7 +51,7 @@ function Events() {
   return (
 
 
-    <div id='events' className='my-8 grid sm:grid-cols-1 lg:grid-cols-2'>
+    <div className='my-8 grid sm:grid-cols-1 lg:grid-cols-2'>
       <div className=''>
 
         <div className=' text-center text-4xl text-gray-700 font-extrabold py-4 '>Upcoming Events</div>
@@ -70,13 +70,13 @@ function Events() {
                     '>{data?.date}
                 </div>
                 <div className='text-sm text-gray-500'>{data?.content}</div>
-                <AnchorLink href="#contactus" className='text-blue-500 hover:text-blue-700'>Contact Us</AnchorLink>
+                <a href="/events" className='text-blue-500 hover:text-blue-700'>Read More</a>
               </div>
 
             </div>
           )
         })}</div> :
-          <div><h4>NO Events to show, Please wait</h4></div>
+          <div><h4>No Events to show, Please wait</h4></div>
         }
 
         {/* end of cards section */}

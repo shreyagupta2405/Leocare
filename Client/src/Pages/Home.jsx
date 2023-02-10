@@ -17,11 +17,31 @@ import h8 from "../Components/images/home8.jpeg";
 import h9 from "../Components/images/home9.jpeg";
 import h10 from "../Components/images/home10.jpeg";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import bannerService from '../api/banner.service'
 
 
 function Home() {
 
     const [isShownCard1, setIsShownCard1] = useState(false);
+    const [image, setImage] = useState(null);
+    const [eventData, setEventData] = useState([]);
+
+    const getAllEventFromStore = async () => {
+        try {
+            const data = await bannerService.getAllEvents()
+            let arr = []
+            data.forEach((doc) => {
+                arr.push({...doc.data(), id: doc.id})
+            })
+            setEventData(arr)
+        } catch (err) {
+            console.log(err);
+        }
+    }
+
+    useEffect(() => {
+        getAllEventFromStore()
+    }, [])
 
     return (
         <div>
@@ -61,20 +81,28 @@ function Home() {
                                 data-bs-slide-to="4"
                                 aria-label="Slide 5"
                             ></button>
-                            
+
                         </div>
+
+                        
+
+
                         <div className="carousel-inner relative w-full overflow-hidden">
+                        
+                        
                             <div className="carousel-item active relative float-left w-full">
                                 <img
-                                    src={h10}
+                                    src={h6}
                                     className="block rounded-lg w-full h-full"
                                     alt="..."
                                 />
                                 <div className="carousel-caption hidden md:block absolute text-center">
-                                    <h5 className="text-4xl">Show you care, change their world</h5>
-                                    
+                                    <h5 className="text-2xl text-white font-serif">Show you care, change their world</h5>
+
                                 </div>
                             </div>
+
+
                             <div className="carousel-item relative float-left w-full">
                                 <img
                                     src={h7}
@@ -82,10 +110,9 @@ function Home() {
                                     alt="..."
                                 />
                                 <div className="carousel-caption hidden md:block absolute text-center">
-                                <h5 className="text-4xl">Show you care, change their world</h5>
+                                    <h5 className="text-2xl text-white font-serif">Show you care, change their world</h5>
                                 </div>
                             </div>
-
                             <div className="carousel-item relative float-left w-full">
                                 <img
                                     src={h5}
@@ -93,7 +120,7 @@ function Home() {
                                     alt="..."
                                 />
                                 <div className="carousel-caption hidden md:block absolute text-center">
-                                <h5 className="text-4xl">Show you care, change their world</h5>
+                                    <h5 className="text-2xl text-white font-serif">Show you care, change their world</h5>
                                 </div>
                             </div>
                             <div className="carousel-item relative float-left w-full">
@@ -103,21 +130,21 @@ function Home() {
                                     alt="..."
                                 />
                                 <div className="carousel-caption hidden md:block absolute text-center">
-                                <h5 className="text-4xl">Show you care, change their world</h5>
+                                    <h5 className="text-2xl text-white font-serif">Show you care, change their world</h5>
                                 </div>
                             </div>
-                            {/* <div className="carousel-item relative float-left w-full">
+                            <div className="carousel-item relative float-left w-full">
                                 <img
-                                    src={h5}
+                                    src={h10}
                                     className="block rounded-lg w-full h-full"
                                     alt="..."
                                 />
                                 <div className="carousel-caption hidden md:block absolute text-center">
-                                <h5 className="text-4xl">Show you care, change their world</h5>
+                                <h5 className="text-2xl text-white font-serif">Show you care, change their world</h5>
                                 </div>
-                            </div> */}
-                            
-                            
+                            </div>
+
+
                         </div>
                         <button
                             className="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
@@ -143,13 +170,13 @@ function Home() {
 
                 <div className='py-8 flex flex-row gap-8 justify-center items-center'>
 
-                <button id='info' type="button" className="mt-4 text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-bold text-2xl rounded-lg px-5 py-2.5 text-center 
+                    <button id='info' type="button" className="mt-4 text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-bold text-2xl rounded-lg px-5 py-2.5 text-center 
                 w-40 ">
-                       <a href='https://pages.razorpay.com/leocarefoundation' target="_blank">DONATE</a> 
+                        <a href='https://pages.razorpay.com/leocarefoundation' target="_blank">DONATE</a>
                     </button>
                     <button type='button' className='mt-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-lg px-5 py-3 lg:px-4 lg:py-2.5 hover:bg-blue-700 text-xl lg:text-2xl '><AnchorLink href='#footer'>SCAN & PAY</AnchorLink></button>
-                
-                    
+
+
                 </div>
 
                 <Info />

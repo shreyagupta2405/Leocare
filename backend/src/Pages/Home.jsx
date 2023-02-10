@@ -26,13 +26,19 @@ function Home() {
       </div>
 
       <div className='items-center justify-center grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 p-4 text-xl'>
-        <Link to='team' className='hover:text-primary h-24 flex justify-center items-center hover:scale-90 rounded-lg m-8 shadow-xl' >Team</Link>
-        {/* <Link to='empowerment' className='hover:text-primary h-24 flex justify-center items-center hover:scale-90 rounded-lg m-8 shadow-xl' >Women Empowerment/Home</Link> */}
+        <Link to='team' className='hover:text-primary h-24 flex justify-center items-center hover:scale-90 rounded-lg m-8 shadow-xl' >Team/Home</Link>
+        <Link to='teamPage' className='hover:text-primary h-24 flex justify-center items-center hover:scale-90 rounded-lg m-8 shadow-xl' >Team</Link>
       </div>
 
       <div className='items-center justify-center grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 p-4 text-xl'>
         <Link to='empowerment' className='hover:text-primary h-24 flex justify-center items-center hover:scale-90 rounded-lg m-8 shadow-xl' >Women Empowerment</Link>
         <Link to='empowerment-home' className='hover:text-primary h-24 flex justify-center items-center hover:scale-90 rounded-lg m-8 shadow-xl' >Women Empowerment/Home</Link>
+      </div>
+
+      <div className='items-center justify-center grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 p-4 text-xl'>
+        <Link to='eventsPage' className='hover:text-primary h-24 flex justify-center items-center hover:scale-90 rounded-lg m-8 shadow-xl' >Events Page</Link>
+        <Link to='banner' className='hover:text-primary h-24 flex justify-center items-center hover:scale-90 rounded-lg m-8 shadow-xl' >Banner Images/Home</Link>
+        {/* <Link to='empowerment-home' className='hover:text-primary h-24 flex justify-center items-center hover:scale-90 rounded-lg m-8 shadow-xl' >Women Empowerment/Home</Link> */}
       </div>
       
       <Footer />
