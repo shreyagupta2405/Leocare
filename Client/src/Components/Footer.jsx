@@ -177,7 +177,7 @@ function Footer() {
 
                 <div class="mt-16 border-t border-gray-100 pt-8">
                     <p class="text-center text-xs leading-relaxed text-gray-500 gap-4 flex flex-row justify-center items-center">
-                        <div>© 2022 Leocare Foundation</div> <a>Privacy Policy</a> <div>All rights reserved.</div>
+                        <div>© 2022 Leocare Foundation</div> <a href='https://drive.google.com/file/d/1Km8Xd1OWWAE6gLLDSDmXljXUpxNeDn6J/view' target='_blank'>Privacy Policy</a> <div>All rights reserved.</div>
                     </p>
                 </div>
             </div>

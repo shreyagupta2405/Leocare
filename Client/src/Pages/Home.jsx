@@ -16,6 +16,7 @@ import h7 from "../Components/images/home7.jpeg";
 import h8 from "../Components/images/home8.jpeg";
 import h9 from "../Components/images/home9.jpeg";
 import h10 from "../Components/images/home10.jpeg";
+import h11 from "../Components/images/home11.jpeg";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import bannerService from '../api/banner.service'
 
@@ -115,7 +116,7 @@ function Home() {
                             </div>
                             <div className="carousel-item relative float-left w-full">
                                 <img
-                                    src={h5}
+                                    src={h11}
                                     className="block rounded-lg w-full h-full"
                                     alt="..."
                                 />
