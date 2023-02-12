@@ -18,21 +18,16 @@ function Journey() {
         </h3>
       </div>
       <div className=' mx-auto p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 '>
-        <div className='w-full col-span-1 justify-center items-center flex h-35'>
-        
-          <div className='flex w-full flex-row'><Text
-            title='Mission'
-            body='mission'
-          /></div>
-         
+        <div className='w-full col-span-1 justify-around items-center flex h-35  p-8'>
+   
+         <img src={children} className="w-[200px] h-[200px] rounded-lg" />
+         <img src={children} className="w-[200px] h-[200px] rounded-lg" />
+
         </div>
-        <div className='col-span-1  justify-center items-center flex h-35'>
+        <div className='col-span-1  justify-center items-center flex h-35 text-black'>
         
-          <div className='flex flex-row'><Text
-            title='Vision'
-            body='vision'
-          /></div>
-          
+dijfijfijjifijfijijfijfiifjfifij
+f4weijewfi
         
         </div>
       </div>
