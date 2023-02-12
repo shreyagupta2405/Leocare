@@ -1,21 +1,43 @@
 import React from 'react'
 import children from './images/children.jpeg'
+import Text from './Text'
 
 function Journey() {
     return (
-        <div className='flex'>
-            <div className=''>
-                {/* <div className='flex py-24 px-8 gap-8'>
-                    <img className='h-64 w-64' src={children}></img>
-                    <img className='h-64 w-64' src={children} ></img>
-                </div> */}
-            </div>
-            <div className=' flex flex-row'>
-                <div className='font-bold text-xl p-4'>The journey to change the world starts with one step.</div>
-                <div className=''>Sadly, not every one is in a positive environment. The Leocare Foundation is committed to helping the most vulnerable women, children and elderly by providing them with protection, education, and support.</div>
-                <div className=''>We are committed to transforming their lives because we know that it will change the world we live in.</div>
-            </div>
+        <div >
+    <div className=' p-4 mt-6 '>
+      <div className='justify-center items-center mt-6'>
+        {/* <h1 className='text-3xl font-extrabold flex justify-center items-center text-gray-800'>The Leocare Organization</h1> */}
+        <h1 className=' flex justify-center items-center text-3xl text-center mt-2  font-extrabold'>
+          The Leocare Foundation
+        </h1>
+        <h3 className=' flex flex-row justify-center items-center text-center mt-2 '>
+        
+          
+         
+        </h3>
+      </div>
+      <div className=' mx-auto p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 '>
+        <div className='w-full col-span-1 justify-center items-center flex h-35'>
+        
+          <div className='flex w-full flex-row'><Text
+            title='Mission'
+            body='mission'
+          /></div>
+         
         </div>
+        <div className='col-span-1  justify-center items-center flex h-35'>
+        
+          <div className='flex flex-row'><Text
+            title='Vision'
+            body='vision'
+          /></div>
+          
+        
+        </div>
+      </div>
+    </div>
+    </div>
     )
 }
 
