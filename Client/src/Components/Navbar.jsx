@@ -58,14 +58,14 @@ function Navbar() {
                     <span className="sr-only">Open main menu</span>
                     <svg className="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
                 </button> */}
-                <div onClick={handleNav} className="block md:hidden bg-white">
+                <div onClick={handleNav} className="block md:hidden bg-white p-2">
                     {nav ? (<AiOutlineClose size={20} className="cursor-pointer" />) : (<AiOutlineMenu size={20} className="cursor-pointer" />)}
                 </div>
                 <div
                     className={nav ? 'fixed h-[100vh] left-0 top-0 w-[70%] border-r bg-white ease-in-out duration-500' : 'ease-in-out duration-500 fixed left-[-100%] '}>
                     <ul className=' p-4 bg-white'>
                         <li>
-                            <a href="/" className="hover:scale-105 block py-2 pl-3 pr-4 text-white bg-blue-700 rounded  md:text-blue-700 md:p-0 dark:text-white" aria-current="page">Home</a>
+                            <a href="/" className="hover:scale-105 block py-2 pl-3 pr-4 text-white bg-blue-700 rounded  md:text-blue-700 md:p-0 dark:text-white text-center" aria-current="page">Home</a>
                         </li>
                         <li>
                             <div className="top-16 text-right">
@@ -114,7 +114,7 @@ function Navbar() {
 
                                                                 <Menu as="div" className=" text-left">
                                                                     <div>
-                                                                        <Menu.Button className="inline-flex w-full justify-center rounded-md text-sm font-medium text-black focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
+                                                                        <Menu.Button className="inline-flex w-full justify-center rounded-md text-sm font-medium text-black focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 p-2">
                                                                             What We Do
                                                                             <ChevronDownIcon
                                                                                 className="ml-2 -mr-1 h-5 w-5 text-violet-200 hover:text-violet-100"
@@ -165,6 +165,7 @@ function Navbar() {
                                                     )}
                                                 </Menu.Item>
                                                 <MenuItem
+                                                
                                                     title='Team'
                                                     href='/team'
                                                 />
@@ -186,7 +187,7 @@ function Navbar() {
                                                                     aria-hidden="true"
                                                                 />
                                                             )}
-                                                            <AnchorLink href="#contactus" className="hover:scale-105 block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact Us</AnchorLink>
+                                                            <AnchorLink href="#contactus" className="hover:scale-105 block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent text-black">Contact Us</AnchorLink>
                                                         </button>
                                                     )}
                                                 </Menu.Item>
@@ -240,14 +241,14 @@ function Navbar() {
                             </div>
                         </li>
                         <li>
-                            <a href="/articles" className="text-black hover:scale-105 block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">News</a>
+                            <a href="/articles" className="text-black hover:scale-105 block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent text-center">News</a>
                         </li>
 
                         <li>
-                            <a href="/events" className="hover:scale-105 block py-2 pl-3 pr-4 text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Events</a>
+                            <a href="/events" className="hover:scale-105 block py-2 pl-3 pr-4 text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent text-center">Events</a>
                         </li>
                         <li>
-                        <a href="https://pages.razorpay.com/leocarefoundation" className="hover:scale-105 block py-2 pl-3 pr-4 text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" target='_blank'>Donate</a>                          
+                        <a href="https://pages.razorpay.com/leocarefoundation" className="hover:scale-105 block py-2 pl-3 pr-4 text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent text-center" target='_blank'>Donate</a>                          
                         </li>
 
                     </ul>

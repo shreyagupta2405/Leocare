@@ -40,6 +40,10 @@ function Home() {
         <Link to='banner' className='hover:text-primary h-24 flex justify-center items-center hover:scale-90 rounded-lg m-8 shadow-xl' >Banner Images/Home</Link>
         {/* <Link to='empowerment-home' className='hover:text-primary h-24 flex justify-center items-center hover:scale-90 rounded-lg m-8 shadow-xl' >Women Empowerment/Home</Link> */}
       </div>
+      <div className='items-center justify-center grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 p-4 text-xl'>
+        <Link to='journey' className='hover:text-primary h-24 flex justify-center items-center hover:scale-90 rounded-lg m-8 shadow-xl' >Journey Images</Link>
+        <Link to='journeytext' className='hover:text-primary h-24 flex justify-center items-center hover:scale-90 rounded-lg m-8 shadow-xl' >Journey Text</Link>
+      </div>
       
       <Footer />
     </div>

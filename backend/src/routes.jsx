@@ -21,6 +21,8 @@ const Empowerment = React.lazy(() => import("./Pages/Empowerment"));
 const Banner = React.lazy(() => import("./Pages/Banner"));
 const EventsMainPage = React.lazy(() => import("./Pages/EventsPage"));
 const TeamMainPage = React.lazy(() => import("./Pages/TeamPage"));
+const Journey = React.lazy(() => import("./Pages/JourneyImage"));
+const JourneyText = React.lazy(() => import("./Pages/JourneyText"));
 
 const routes = [
     {
@@ -126,6 +128,16 @@ const routes = [
     {
         path: "/teamPage",
         component: <TeamMainPage/>,
+        privateRoute: true
+    },
+    {
+        path: "/journey",
+        component: <Journey/>,
+        privateRoute: true
+    },
+    {
+        path: "/journeytext",
+        component: <JourneyText/>,
         privateRoute: true
     },
 
