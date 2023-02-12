@@ -30,7 +30,7 @@ function Empowerment() {
   }, [])
   return (
     <div>
-      <div className='p-6 text-4xl text-gray-700 flex flex-col justify-center items-center'>
+      <div className='text-center p-6 text-4xl text-gray-700 flex flex-col justify-center items-center'>
         Women Empowerment
       </div>
       <div >

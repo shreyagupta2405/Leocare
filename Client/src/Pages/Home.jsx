@@ -175,7 +175,7 @@ function Home() {
                 w-40 ">
                         <a href='https://pages.razorpay.com/leocarefoundation' target="_blank">DONATE</a>
                     </button>
-                    <button type='button' className='mt-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-lg px-5 py-3 lg:px-4 lg:py-2.5 hover:bg-blue-700 text-xl lg:text-2xl '><AnchorLink href='#footer'>SCAN & PAY</AnchorLink></button>
+                    <button type='button' className='mt-4 shadow-xl bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-lg px-5 py-3 lg:px-4 lg:py-2.5 hover:bg-blue-700 text-xl lg:text-2xl '><AnchorLink href='#footer'>SCAN & PAY</AnchorLink></button>
 
 
                 </div>
