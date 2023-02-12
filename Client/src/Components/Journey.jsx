@@ -44,10 +44,10 @@ function Journey() {
 
     return (
         <div >
-            <div className='justify-center items-center mt-6'>
+            <div className='justify-center items-center  my-12'>
                 {journeyData ? <div>{journeyData.slice(0, 1)?.map((data, key) => {
                     return (
-                        <h1 className=' flex justify-center items-center text-3xl text-center mt-2 p-4 font-extrabold'>
+                        <h1 className=' flex justify-center items-center text-3xl text-center mt-12 p-4 font-extrabold'>
                             {data?.heading}
                         </h1>
                     )
@@ -58,7 +58,7 @@ function Journey() {
 
                 <div className=' mx-auto py-12 p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 '>
                 <div className='w-full col-span-1 justify-around shadow-lg rounded-lg items-center grid h-35  p-8 '>
-                    {eventData ? <div>{eventData.slice(0, 2)?.map((data, key) => {
+                    {eventData ? <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>{eventData.slice(0, 2)?.map((data, key) => {
                         return (
                             
                             <img src={data?.url} className="w-[200px] h-[200px] rounded-lg" />
