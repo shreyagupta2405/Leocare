@@ -57,7 +57,7 @@ function Articles() {
                   <div className='p-4 m-8 justify-center  items-center'>
                     <img className='w-96 p-4' src={data?.url}></img>
                     <div className='my-4 p-4 rounded-lg shadow-lg hover:shadow-2xl text-gray-500'>
-                      <div className='text-center text-xl text-black '>Description</div>
+                      <div className='text-center text-xl text-black '>{data?.heading}</div>
                       <div className='text-center'>{data?.content}</div>
                     </div>
                   </div>

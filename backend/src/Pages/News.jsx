@@ -25,6 +25,7 @@ function Educate() {
 
 
     const validationSchema = yup.object().shape({
+        heading: yup.string().required(),
         content: yup.string().required(),
        
     });
@@ -35,6 +36,7 @@ function Educate() {
         try {
             await newsService.addEvent(
                 {
+                    "heading" : data?.heading,
                     "url": url,
                     "content": data?.content,
                 }
@@ -102,6 +104,15 @@ function Educate() {
                                         setImage(event.target.files[0]);
                                     }
                                 }} />
+                                <FormInputComponent
+                                label='Heading'
+                                type='text'
+                                name='heading'
+                                placeholder='Enter the Content'
+                                control={control}
+                                error={errors?.content?.message}
+                                required
+                            />
                                 <FormTextInput
                                 label='Content'
                                 type='text'
@@ -136,6 +147,9 @@ function Educate() {
                                     <img className='h-56
                                     ' src={data?.url
                                         } />
+                                </div>
+                                <div className='flex justify-center items-center'>
+                                    <h1 className='text-xl font-bold'>{data?.heading}</h1>
                                 </div>
                                 <div className='flex justify-center items-center'>
                                     <p className='text-xl'>{data?.content}</p>
