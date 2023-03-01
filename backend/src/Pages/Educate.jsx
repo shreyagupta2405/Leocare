@@ -22,15 +22,17 @@ import educateService from '../api/educate.service'
 function Educate() {
     const [image, setImage] = useState(null);
     const [eventData, setEventData] = useState([]);
-    const [bookId, setBookId] = useState("");
-
+    const [bookId, setBookId ,reset] = useState("");
+    const [edit, setEdit] = useState(false);
+    const [editImage, setEditImage] = useState(null);
+    const [editId, setEditId] = useState(null);
 
     const validationSchema = yup.object().shape({
         heading: yup.string(),
         content: yup.string(),
         postDate: yup.string(),
     });
-    const { register, handleSubmit, setValue, getValues, control, formState: { errors } } = useForm({
+    const { register,  handleSubmit, setValue, getValues, control, formState: { errors } , } = useForm({
         resolver: yupResolver(validationSchema),
     });
     const addEventToStore = async (data, url) => {
@@ -42,12 +44,65 @@ function Educate() {
                     "url": url,
                 }
             );
-
+          
+            getAllEventFromStore();
+            reset();
         } catch (err) {
             console.log(err);
+            setEditId(null);
+            setEdit(false);
+            reset();
+            setEditImage(null);
         }
     }
+
+    const updateEventToStore = async (data, url) => {
+        console.log("editId", data)
+
+        try {
+            await educateService.updateEvent(
+                editId,
+                {
+                    "content": data?.content,
+                    "date": data?.postDate,
+                    "url": url,
+                },
+            );
+            setEditId(null);
+            setEdit(false);
+            setEditImage(null);
+            reset();
+        } catch (err) {
+            console.log(err);
+            setEditId(null);
+            setEdit(false);
+            setEditImage(null);
+        }
+    }
+            
     const onSubmit = async (data) => {
+
+        if(edit){
+            if (image) {
+                const imageRef = ref(storage, `images/${"1" + v4()}`);
+                uploadBytes(imageRef, image).then((snapshot) => {
+                    getDownloadURL(snapshot.ref).then((url) => {
+                        updateEventToStore(data, url)
+                    }).catch((error) => {
+                        console.log(error)
+                        toast.error("Can't upload", toastArray);
+                    });
+                });
+                setEditId(null);
+                setEdit(false);
+                setEditImage(null);
+              } else {
+                updateEventToStore(data, editImage);
+                setEditId(null);
+                setEdit(false);
+                setEditImage(null);
+              }
+        }else{
         if (image) {
             const imageRef = ref(storage, `images/${"1" + v4()}`);
             uploadBytes(imageRef, image).then((snapshot) => {
@@ -69,6 +124,7 @@ function Educate() {
 
 
     }
+}
 
     const getAllEventFromStore = async () => {
         try {
@@ -78,6 +134,7 @@ function Educate() {
                 arr.push({ ...doc.data(), id: doc.id })
             })
             setEventData(arr)
+            console.log("all data", arr)
         } catch (err) {
             console.log(err);
         }
@@ -89,18 +146,14 @@ function Educate() {
 
 
     const editHandler = async (id) => {
-
+            setEdit(true);
+            setEditId(id);
             const docSnap = await educateService.getEvent(id);
-            console.log(getValues('content'))
-            console.log("the record is: ", docSnap.data());
-            setValue('heading', docSnap.data().content);
             setValue('content', docSnap.data().content);
-            console.log(getValues('heading'))
-            console.log(docSnap.data().content);
+            setEditImage(docSnap.data().url);
     };
 
     useEffect(() => {
-        console.log("The id here is useEffect : ", bookId);
         getAllEventFromStore();
     }, [])
 
@@ -120,8 +173,12 @@ function Educate() {
                                 onChange={(event) => {
                                     if (event.target.files[0]) {
                                         setImage(event.target.files[0]);
+                                        setEditImage(null);
                                     }
                                 }} />
+                            {editImage && (
+  <img src={editImage} alt="Edit" className="mt-4 w-full" />
+)}
                             <FormInputComponent
                                 label='Heading'
                                 type='text'
