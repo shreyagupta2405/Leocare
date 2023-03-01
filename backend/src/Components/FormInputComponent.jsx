@@ -26,7 +26,6 @@ function FormInputComponent(
                     <input
                         {...field}
                         type={type}
-                        value={props?.value}
                         id={name}
                         accept={props?.accept}
                         placeholder={props?.placeholder}

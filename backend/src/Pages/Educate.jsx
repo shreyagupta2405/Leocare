@@ -17,22 +17,12 @@ import {
 import { toast } from "react-toastify";
 import { toastArray } from '../Components/Toast'
 import educateService from '../api/educate.service'
-import { getValue } from '@mui/system'
 
 
 function Educate() {
     const [image, setImage] = useState(null);
     const [eventData, setEventData] = useState([]);
     const [bookId, setBookId] = useState("");
-    const [heading, setHeading] = useState("");
-    const [content, setContent] = useState("");
-    const [message, setMessage] = useState({ error: false, msg: "" });
-
-
-    // const getBookId = (id) => {
-    //     console.log("the id: ", id)
-    //     setBookId(id);
-    // }
 
 
     const validationSchema = yup.object().shape({
@@ -41,7 +31,7 @@ function Educate() {
         postDate: yup.string(),
     });
     const { register, handleSubmit, setValue, getValues, control, formState: { errors } } = useForm({
-        resolver: yupResolver(validationSchema)
+        resolver: yupResolver(validationSchema),
     });
     const addEventToStore = async (data, url) => {
         try {
@@ -99,26 +89,19 @@ function Educate() {
 
 
     const editHandler = async (id) => {
-        setMessage("");
-        try {
+
             const docSnap = await educateService.getEvent(id);
             console.log(getValues('content'))
             console.log("the record is: ", docSnap.data());
+            setValue('heading', docSnap.data().content);
             setValue('content', docSnap.data().content);
-            console.log(getValues('content'))
+            console.log(getValues('heading'))
             console.log(docSnap.data().content);
-
-        } catch (err) {
-            setMessage({ error: true, msg: err.message });
-        }
     };
 
     useEffect(() => {
         console.log("The id here is useEffect : ", bookId);
         getAllEventFromStore();
-        // if (bookId !== undefined && bookId !== "") {
-        //     editHandler();
-        // }
     }, [])
 
 
@@ -158,13 +141,13 @@ function Educate() {
                                 required
                             />
                             <FormTextInput
-                                label='Content'
-                                type='text'
-                                name='content'
-                                placeholder='Enter the Content'
-                                control={control}
-                                error={errors?.content?.message}
-                                required
+                              label='ContentS'
+                              type='text'
+                              name='content'
+                              placeholder='Enter the content'
+                              control={control}
+                              error={errors?.content?.message}
+                              required
                             />
 
                         </form>
@@ -184,13 +167,10 @@ function Educate() {
                 {
                     eventData &&
                     eventData.map((data) => {
-                        {/* console.log(data) */ }
                         return (
                             <div className='p-2 m-4 w-5/6 outline-double'>
                                 <div className='flex justify-center items-center'>
-                                    <img className='h-36
-                                    ' src={data?.url
-                                        } />
+                                    <img className='h-36' src={data?.url } />
                                 </div>
                                 <div className='flex justify-center items-center'>
                                     <h1 className='text-2xl font-bold'>{data?.heading}</h1>
@@ -203,7 +183,7 @@ function Educate() {
                                 </div>
                                 {console.log(getValues('content'))}
                                 <div className='m-2'>
-                                    <button type='button' className='rounded-lg mx-2 bg-gray text-white w-20 h-8' onClick={() => {setValue("content","abcdcfcctdtddttddttdtd");}} >Edit</button>
+                                    <button type='button' className='rounded-lg mx-2 bg-gray text-white w-20 h-8' onClick={() => {editHandler(data?.id)}} >Edit</button>
                                     <button type='button' className='rounded-lg mx-2 bg-red text-white w-20 h-8' onClick={(e) => deleteEvent(data?.id)}>Delete</button>
                                 </div>
 
