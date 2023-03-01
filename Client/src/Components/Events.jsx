@@ -51,10 +51,10 @@ function Events() {
   return (
 
 
-    <div className='my-8 grid sm:grid-cols-1 lg:grid-cols-2'>
+    <div className='my-8 mt-16 grid sm:grid-cols-1 lg:grid-cols-2'>
       <div className=''>
 
-        <div className=' text-center text-4xl text-gray-700 font-extrabold py-4 '>Upcoming Events</div>
+        <div className=' text-center text-4xl text-gray-700 font-extrabold py-4 '><a href='/events'>Upcoming Events</a></div>
 
         {/* 1st card */}
         {/* {console.log(eventData)} */}

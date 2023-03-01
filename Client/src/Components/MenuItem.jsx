@@ -53,7 +53,7 @@ function MenuItem({title, href, target}) {
                                 aria-hidden="true"
                             />
                         )}
-                        <a className='hover:scale-105 block py-2 pl-3 pr-4  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent' target={target} href={href}>{title}</a>
+                        <a className='hover:scale-105 block py-2 pl-3 pr-4  rounded md:border-0 hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark dark:hover:bg-gray-700 ' target={target} href={href}>{title}</a>
                     </button>
                 )}
             </Menu.Item>

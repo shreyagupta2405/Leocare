@@ -31,7 +31,7 @@ function Team() {
     return (
         <div id='team' className='bg-purple-100 block justify-center'>
             <div className='text-primary font-semibold lg:text-[2rem] 
-        text-[1.4rem]  text-center mt-6'> Meet the Team
+        text-[1.4rem]  text-center mt-6'> <a href='/team'>Meet the Team</a>
             </div>
 
             <div className='text-center  text-lg'>Meet the team responsible for bringing enlightenment to so many lives</div>

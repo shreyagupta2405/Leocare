@@ -6,6 +6,8 @@ import Journey from '../Components/Journey';
 import Team from '../Components/Team';
 import Info from '../Components/Info';
 import Events from '../Components/Events';
+import scan from '../Components/images/scan.jpeg'
+import img from '../Components/images/news.jpg'
 import h1 from "../Components/images/home1.jpg";
 import h2 from "../Components/images/home2.jpg";
 import h3 from "../Components/images/home3.png";
@@ -186,6 +188,55 @@ function Home() {
                 <Stats />
                 <Team />
                 <Events />
+                <div class=" flex justify-center items-center container  pt-4 ">
+                    <div className="lg:pl-16 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 items-center justify-center">
+                        <div class=" max-w-md mt-12">
+                            <strong
+                                class="block text-center text-lg font-medium text-gray-900 sm:text-3xl"
+                            >
+                                Want us to email you with the latest blockbuster news?
+                            </strong>
+
+                            <form class="mt-6">
+                                <div class="relative max-w-lg">
+                                    <label class="sr-only" for="email"> Email </label>
+
+                                    <input
+                                        class="w-full rounded-full border-gray-200 bg-gray-100 p-4 pr-32 text-sm font-medium"
+                                        id="email"
+                                        type="email"
+                                        placeholder="john@gmail.com"
+                                    />
+
+                                    <button
+                                        class="absolute top-1/2 right-1 -translate-y-1/2 rounded-full bg-blue-600 px-5 py-3 text-sm font-medium text-white transition hover:bg-blue-700"
+                                        type="button"
+                                    >
+                                        Subscribe
+                                    </button>
+
+                                </div>
+
+                            </form>
+                            <div className=' flex flex-col items-center'>
+                                <img className='w-80' src={scan}></img>
+                            </div>
+                        </div>
+
+                        <div class="lg:pl-36 justify-self-center  bg-slate-900  text-black  text-center mt-14">
+
+                            <div className='text-3xl font-serif p-2'><a href='/articles'>News Articles</a></div>
+                            <img src={img} className='h-96 m-4'></img>
+                            <button className='text-xl m-4 p-2 bg-blue-600 rounded-lg hover:bg-blue-700 text-white w-36'><a href='/articles'> Read More</a></button>
+                            <button type="button" className=" text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-medium rounded-lg text-lg px-5 py-2.5 text-center ">
+                                <a href='https://pages.razorpay.com/leocarefoundation' target="_blank">DONATE</a>
+                            </button>
+                        </div>
+
+                    </div>
+
+
+                </div>
 
             </div>
         </div>

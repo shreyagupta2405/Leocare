@@ -1,5 +1,4 @@
 import React from 'react'
-import children from './images/children.jpeg'
 import journeyService1 from '../api/journey.service1'
 import journeyService2 from '../api/journey.service2'
 import { useState, useEffect } from 'react'
@@ -68,12 +67,7 @@ function Journey() {
                         <div><h4>No Events to show, Please wait</h4></div>
                     }
                     </div>
-                    {/* <div className='w-full col-span-1 justify-around shadow-lg rounded-lg items-center flex h-35  p-8'>
-
-                        <img src={children} className="w-[200px] h-[200px] rounded-lg" />
-                        <img src={children} className="w-[200px] h-[200px] rounded-lg" />
-
-                    </div> */}
+                    
 
 
 

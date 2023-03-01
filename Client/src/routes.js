@@ -11,6 +11,7 @@ const Elder = React.lazy(() => import("./Pages/Elder"));
 const Empower = React.lazy(() => import("./Pages/Empower"));
 const EventsPage = React.lazy(() => import("./Pages/EventsPage"));
 const TeamsPage = React.lazy(() => import("./Pages/TeamsPage"));
+const Gallery = React.lazy(() => import("./Pages/Gallery"));
 
 const routes = [ 
 	{
@@ -56,6 +57,10 @@ const routes = [
 	{
         path: "/team",
 		component: <TeamsPage/>,
+	},
+	{
+        path: "/gallery",
+		component: <Gallery/>,
 	},
 
 	

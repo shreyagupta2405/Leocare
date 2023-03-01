@@ -17,22 +17,30 @@ import {
 import { toast } from "react-toastify";
 import { toastArray } from '../Components/Toast'
 import educateService from '../api/educate.service'
+import { getValue } from '@mui/system'
 
 
 function Educate() {
     const [image, setImage] = useState(null);
     const [eventData, setEventData] = useState([]);
+    const [bookId, setBookId] = useState("");
+    const [heading, setHeading] = useState("");
+    const [content, setContent] = useState("");
+    const [message, setMessage] = useState({ error: false, msg: "" });
+
+
+    // const getBookId = (id) => {
+    //     console.log("the id: ", id)
+    //     setBookId(id);
+    // }
 
 
     const validationSchema = yup.object().shape({
-        heading: yup.string().required("Required Field"),
-        content: yup.string().required(),
-        // email: yup.string().email('Invalid Email'),
+        heading: yup.string(),
+        content: yup.string(),
         postDate: yup.string(),
-        // image: yup.mixed().required('File is required'),
-        //password: yup.string().required("Required Field").min(6)
     });
-    const { register, handleSubmit, control, formState: { errors } } = useForm({
+    const { register, handleSubmit, setValue, getValues, control, formState: { errors } } = useForm({
         resolver: yupResolver(validationSchema)
     });
     const addEventToStore = async (data, url) => {
@@ -69,14 +77,15 @@ function Educate() {
             toast.error("Please select an image", toastArray);
         }
 
+
     }
-    
+
     const getAllEventFromStore = async () => {
         try {
             const data = await educateService.getAllEvents()
             let arr = []
             data.forEach((doc) => {
-                arr.push({...doc.data(), id: doc.id})
+                arr.push({ ...doc.data(), id: doc.id })
             })
             setEventData(arr)
         } catch (err) {
@@ -87,13 +96,35 @@ function Educate() {
         await educateService.deleteEvents(id);
         getAllEventFromStore();
     }
+
+
+    const editHandler = async (id) => {
+        setMessage("");
+        try {
+            const docSnap = await educateService.getEvent(id);
+            console.log(getValues('content'))
+            console.log("the record is: ", docSnap.data());
+            setValue('content', docSnap.data().content);
+            console.log(getValues('content'))
+            console.log(docSnap.data().content);
+
+        } catch (err) {
+            setMessage({ error: true, msg: err.message });
+        }
+    };
+
     useEffect(() => {
-        getAllEventFromStore()
+        console.log("The id here is useEffect : ", bookId);
+        getAllEventFromStore();
+        // if (bookId !== undefined && bookId !== "") {
+        //     editHandler();
+        // }
     }, [])
 
-    
-  return (
-    <div class="lg:flex">
+
+    return (
+
+        <div class="lg:flex">
             <div class="lg:w-1/2 xl:max-w-screen-sm ">
                 <div class="mt-2 px-2 sm:px-24 md:px-48 lg:px-12 lg:mt-16 xl:px-24 xl:max-w-2xl">
 
@@ -135,7 +166,7 @@ function Educate() {
                                 error={errors?.content?.message}
                                 required
                             />
-                            
+
                         </form>
                         <div class="mt-10">
                             <button type='submit' form='hook-form' class="bg-indigo-500 text-gray-100 p-4 w-full rounded-full tracking-wide
@@ -153,7 +184,7 @@ function Educate() {
                 {
                     eventData &&
                     eventData.map((data) => {
-                        console.log(data)
+                        {/* console.log(data) */ }
                         return (
                             <div className='p-2 m-4 w-5/6 outline-double'>
                                 <div className='flex justify-center items-center'>
@@ -170,11 +201,12 @@ function Educate() {
                                 <div className='flex justify-center items-center'>
                                     <p className='text-xl'>{data?.content}</p>
                                 </div>
+                                {console.log(getValues('content'))}
                                 <div className='m-2'>
-                                <button className='rounded-lg mx-2 bg-gray text-white w-20 h-8'>Edit</button>
-                                <button className='rounded-lg mx-2 bg-red text-white w-20 h-8' onClick={(e) => deleteEvent(data?.id)}>Delete</button>
+                                    <button type='button' className='rounded-lg mx-2 bg-gray text-white w-20 h-8' onClick={() => {setValue("content","abcdcfcctdtddttddttdtd");}} >Edit</button>
+                                    <button type='button' className='rounded-lg mx-2 bg-red text-white w-20 h-8' onClick={(e) => deleteEvent(data?.id)}>Delete</button>
                                 </div>
-                                
+
                             </div>
                         )
                     })
@@ -182,8 +214,8 @@ function Educate() {
                 }
             </div>
         </div>
-            
-  )
+
+    )
 }
 
 export default Educate;
