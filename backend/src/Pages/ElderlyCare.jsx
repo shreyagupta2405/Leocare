@@ -22,53 +22,104 @@ import elderlyService from '../api/elderlycare.service'
 function ElderlyCare() {
     const [image, setImage] = useState(null);
     const [eventData, setEventData] = useState([]);
+    const [bookId, setBookId, reset] = useState("");
+    const [edit, setEdit] = useState(false);
+    const [editImage, setEditImage] = useState(null);
+    const [editId, setEditId] = useState(null);
 
 
     const validationSchema = yup.object().shape({
         heading: yup.string().required("Required Field"),
         content: yup.string().required(),
-        // email: yup.string().email('Invalid Email'),
         postDate: yup.string(),
-        // image: yup.mixed().required('File is required'),
-        //password: yup.string().required("Required Field").min(6)
     });
-    const { register, handleSubmit, control, formState: { errors } } = useForm({
+    const { register, handleSubmit, setValue, control, formState: { errors } } = useForm({
         resolver: yupResolver(validationSchema)
     });
     const addEventToStore = async (data, url) => {
         try {
             await elderlyService.addEvent(
                 {
+                    "heading":data?.heading,
                     "content": data?.content,
                     "date": data?.postDate,
                     "url": url,
                 }
             );
+            getAllEventFromStore();
+            reset();
 
         } catch (err) {
             console.log(err);
+            setEditId(null);
+            setEdit(false);
+            reset();
+            setEditImage(null);
+        }
+    }
+    const updateEventToStore = async (data, url) => {
+        console.log("editId", data)
+
+        try {
+            await elderlyService.updateEvent(
+                editId,
+                {
+                    "heading" : data?.heading,
+                    "url": url,
+                    "content": data?.content,
+                    "date": data?.date,
+                },
+            );
+            setEditId(null);
+            setEdit(false);
+            setEditImage(null);
+            reset();
+        } catch (err) {
+            console.log(err);
+            setEditId(null);
+            setEdit(false);
+            setEditImage(null);
         }
     }
     const onSubmit = async (data) => {
-        if (image) {
-            const imageRef = ref(storage, `images/${"1" + v4()}`);
-            uploadBytes(imageRef, image).then((snapshot) => {
-                getDownloadURL(snapshot.ref).then((url) => {
-                    addEventToStore(data, url)
-                }).catch((error) => {
-                    console.log(error)
-                    toast.error("Can't upload", toastArray);
-
+        if (edit) {
+            if (image) {
+                const imageRef = ref(storage, `images/${"1" + v4()}`);
+                uploadBytes(imageRef, image).then((snapshot) => {
+                    getDownloadURL(snapshot.ref).then((url) => {
+                        updateEventToStore(data, url)
+                    }).catch((error) => {
+                        console.log(error)
+                        toast.error("Can't upload", toastArray);
+                    });
                 });
-            });
+                setEditId(null);
+                setEdit(false);
+                setEditImage(null);
+            } else {
+                updateEventToStore(data, editImage);
+                setEditId(null);
+                setEdit(false);
+                setEditImage(null);
+            }
+        } else {
+            if (image) {
+                const imageRef = ref(storage, `images/${"1" + v4()}`);
+                uploadBytes(imageRef, image).then((snapshot) => {
+                    getDownloadURL(snapshot.ref).then((url) => {
+                        addEventToStore(data, url)
+                    }).catch((error) => {
+                        console.log(error)
+                        toast.error("Can't upload", toastArray);
 
-
+                    });
+                });
+            }
+            else {
+                console.log("Please select an image")
+                toast.error("Please select an image", toastArray);
+            }
         }
-        else {
-            console.log("Please select an image")
-            toast.error("Please select an image", toastArray);
-        }
-
     }
     
     const getAllEventFromStore = async () => {
@@ -87,6 +138,16 @@ function ElderlyCare() {
         await elderlyService.deleteEvents(id);
         getAllEventFromStore();
     }
+    const editHandler = async (id) => {
+        setEdit(true);
+        setEditId(id);
+        const docSnap = await elderlyService.getEvent(id);
+        setValue('content', docSnap.data().content);
+        setValue('heading', docSnap.data().heading);
+        setValue('date', docSnap.data().date);
+        setEditImage(docSnap.data().url);
+    };
+
     useEffect(() => {
         getAllEventFromStore()
     }, [])
@@ -108,6 +169,9 @@ function ElderlyCare() {
                                         setImage(event.target.files[0]);
                                     }
                                 }} />
+                                {editImage && (
+                                <img src={editImage} alt="Edit" className="mt-4 w-full" />
+                            )}
                             <FormInputComponent
                                 label='Heading'
                                 type='text'
@@ -171,7 +235,7 @@ function ElderlyCare() {
                                     <p className='text-xl'>{data?.content}</p>
                                 </div>
                                 <div className='m-2'>
-                                <button className='rounded-lg mx-2 bg-gray text-white w-20 h-8'>Edit</button>
+                                <button className='rounded-lg mx-2 bg-gray text-white w-20 h-8' onClick={() => { editHandler(data?.id) }}>Edit</button>
                                 <button className='rounded-lg mx-2 bg-red text-white w-20 h-8' onClick={(e) => deleteEvent(data?.id)}>Delete</button>
                                 </div>
                                 

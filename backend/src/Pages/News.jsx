@@ -61,7 +61,6 @@ function News() {
 
     const updateEventToStore = async (data, url) => {
         console.log("editId", data)
-
         try {
             await newsService.updateEvent(
                 editId,
