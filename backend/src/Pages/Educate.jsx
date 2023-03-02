@@ -22,7 +22,7 @@ import educateService from '../api/educate.service'
 function Educate() {
     const [image, setImage] = useState(null);
     const [eventData, setEventData] = useState([]);
-    const [bookId, setBookId ,reset] = useState("");
+    const [bookId, setBookId, reset] = useState("");
     const [edit, setEdit] = useState(false);
     const [editImage, setEditImage] = useState(null);
     const [editId, setEditId] = useState(null);
@@ -32,7 +32,7 @@ function Educate() {
         content: yup.string(),
         postDate: yup.string(),
     });
-    const { register,  handleSubmit, setValue, getValues, control, formState: { errors } , } = useForm({
+    const { register, handleSubmit, setValue, getValues, control, formState: { errors }, } = useForm({
         resolver: yupResolver(validationSchema),
     });
     const addEventToStore = async (data, url) => {
@@ -44,7 +44,7 @@ function Educate() {
                     "url": url,
                 }
             );
-          
+
             getAllEventFromStore();
             reset();
         } catch (err) {
@@ -79,10 +79,9 @@ function Educate() {
             setEditImage(null);
         }
     }
-            
-    const onSubmit = async (data) => {
 
-        if(edit){
+    const onSubmit = async (data) => {
+        if (edit) {
             if (image) {
                 const imageRef = ref(storage, `images/${"1" + v4()}`);
                 uploadBytes(imageRef, image).then((snapshot) => {
@@ -96,35 +95,31 @@ function Educate() {
                 setEditId(null);
                 setEdit(false);
                 setEditImage(null);
-              } else {
+            } else {
                 updateEventToStore(data, editImage);
                 setEditId(null);
                 setEdit(false);
                 setEditImage(null);
-              }
-        }else{
-        if (image) {
-            const imageRef = ref(storage, `images/${"1" + v4()}`);
-            uploadBytes(imageRef, image).then((snapshot) => {
-                getDownloadURL(snapshot.ref).then((url) => {
-                    addEventToStore(data, url)
-                }).catch((error) => {
-                    console.log(error)
-                    toast.error("Can't upload", toastArray);
+            }
+        } else {
+            if (image) {
+                const imageRef = ref(storage, `images/${"1" + v4()}`);
+                uploadBytes(imageRef, image).then((snapshot) => {
+                    getDownloadURL(snapshot.ref).then((url) => {
+                        addEventToStore(data, url)
+                    }).catch((error) => {
+                        console.log(error)
+                        toast.error("Can't upload", toastArray);
 
+                    });
                 });
-            });
-
-
+            }
+            else {
+                console.log("Please select an image")
+                toast.error("Please select an image", toastArray);
+            }
         }
-        else {
-            console.log("Please select an image")
-            toast.error("Please select an image", toastArray);
-        }
-
-
     }
-}
 
     const getAllEventFromStore = async () => {
         try {
@@ -146,11 +141,11 @@ function Educate() {
 
 
     const editHandler = async (id) => {
-            setEdit(true);
-            setEditId(id);
-            const docSnap = await educateService.getEvent(id);
-            setValue('content', docSnap.data().content);
-            setEditImage(docSnap.data().url);
+        setEdit(true);
+        setEditId(id);
+        const docSnap = await educateService.getEvent(id);
+        setValue('content', docSnap.data().content);
+        setEditImage(docSnap.data().url);
     };
 
     useEffect(() => {
@@ -177,8 +172,8 @@ function Educate() {
                                     }
                                 }} />
                             {editImage && (
-  <img src={editImage} alt="Edit" className="mt-4 w-full" />
-)}
+                                <img src={editImage} alt="Edit" className="mt-4 w-full" />
+                            )}
                             <FormInputComponent
                                 label='Heading'
                                 type='text'
@@ -198,13 +193,13 @@ function Educate() {
                                 required
                             />
                             <FormTextInput
-                              label='ContentS'
-                              type='text'
-                              name='content'
-                              placeholder='Enter the content'
-                              control={control}
-                              error={errors?.content?.message}
-                              required
+                                label='Content'
+                                type='text'
+                                name='content'
+                                placeholder='Enter the content'
+                                control={control}
+                                error={errors?.content?.message}
+                                required
                             />
 
                         </form>
@@ -227,7 +222,7 @@ function Educate() {
                         return (
                             <div className='p-2 m-4 w-5/6 outline-double'>
                                 <div className='flex justify-center items-center'>
-                                    <img className='h-36' src={data?.url } />
+                                    <img className='h-36' src={data?.url} />
                                 </div>
                                 <div className='flex justify-center items-center'>
                                     <h1 className='text-2xl font-bold'>{data?.heading}</h1>
@@ -240,7 +235,7 @@ function Educate() {
                                 </div>
                                 {console.log(getValues('content'))}
                                 <div className='m-2'>
-                                    <button type='button' className='rounded-lg mx-2 bg-gray text-white w-20 h-8' onClick={() => {editHandler(data?.id)}} >Edit</button>
+                                    <button type='button' className='rounded-lg mx-2 bg-gray text-white w-20 h-8' onClick={() => { editHandler(data?.id) }} >Edit</button>
                                     <button type='button' className='rounded-lg mx-2 bg-red text-white w-20 h-8' onClick={(e) => deleteEvent(data?.id)}>Delete</button>
                                 </div>
 
