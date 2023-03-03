@@ -8,17 +8,15 @@ import Info from '../Components/Info';
 import Events from '../Components/Events';
 import scan from '../Components/images/scan.jpeg'
 import img from '../Components/images/news.jpg'
-import h1 from "../Components/images/home1.jpg";
-import h2 from "../Components/images/home2.jpg";
-import h3 from "../Components/images/home3.png";
 import h4 from "../Components/images/home4.jpeg";
-import h5 from "../Components/images/home5.jpeg";
 import h6 from "../Components/images/home6.jpeg";
 import h7 from "../Components/images/home7.jpeg";
-import h8 from "../Components/images/home8.jpeg";
-import h9 from "../Components/images/home9.jpeg";
 import h10 from "../Components/images/home10.jpeg";
 import h11 from "../Components/images/home11.jpeg";
+import hp1 from "../Components/images/homepage1.jpeg";
+import hp2 from "../Components/images/homepage2.jpeg";
+import hp3 from "../Components/images/homepage3.jpeg";
+import hp4 from "../Components/images/homepage4.jpeg";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import bannerService from '../api/banner.service'
 
@@ -78,12 +76,12 @@ function Home() {
                                 data-bs-slide-to="3"
                                 aria-label="Slide 4"
                             ></button>
-                            <button
+                            {/* <button
                                 type="button"
                                 data-bs-target="#carouselExampleCaptions"
                                 data-bs-slide-to="4"
                                 aria-label="Slide 5"
-                            ></button>
+                            ></button> */}
 
                         </div>
 
@@ -95,12 +93,12 @@ function Home() {
                         
                             <div className="carousel-item active relative float-left w-full">
                                 <img
-                                    src={h6}
+                                    src={hp1}
                                     className="block rounded-lg w-full h-full"
                                     alt="..."
                                 />
                                 <div className="carousel-caption hidden md:block absolute text-center">
-                                    <h5 className="text-2xl text-white font-serif">Show you care, change their world</h5>
+                                    <h5 className="text-2xl text-black font-serif">Show you care, change their world</h5>
 
                                 </div>
                             </div>
@@ -108,35 +106,35 @@ function Home() {
 
                             <div className="carousel-item relative float-left w-full">
                                 <img
-                                    src={h7}
+                                    src={hp2}
                                     className="block rounded-lg w-full h-full"
                                     alt="..."
                                 />
                                 <div className="carousel-caption hidden md:block absolute text-center">
-                                    <h5 className="text-2xl text-white font-serif">Show you care, change their world</h5>
+                                    <h5 className="text-2xl text-black font-serif">Show you care, change their world</h5>
                                 </div>
                             </div>
                             <div className="carousel-item relative float-left w-full">
                                 <img
-                                    src={h11}
+                                    src={hp3}
                                     className="block rounded-lg w-full h-full"
                                     alt="..."
                                 />
                                 <div className="carousel-caption hidden md:block absolute text-center">
-                                    <h5 className="text-2xl text-white font-serif">Show you care, change their world</h5>
+                                    <h5 className="text-2xl text-black font-serif">Show you care, change their world</h5>
                                 </div>
                             </div>
                             <div className="carousel-item relative float-left w-full">
                                 <img
-                                    src={h4}
+                                    src={hp4}
                                     className="block rounded-lg w-full h-full"
                                     alt="..."
                                 />
                                 <div className="carousel-caption hidden md:block absolute text-center">
-                                    <h5 className="text-2xl text-white font-serif">Show you care, change their world</h5>
+                                    <h5 className="text-2xl text-black font-serif">Show you care, change their world</h5>
                                 </div>
                             </div>
-                            <div className="carousel-item relative float-left w-full">
+                            {/* <div className="carousel-item relative float-left w-full">
                                 <img
                                     src={h10}
                                     className="block rounded-lg w-full h-full"
@@ -145,7 +143,7 @@ function Home() {
                                 <div className="carousel-caption hidden md:block absolute text-center">
                                 <h5 className="text-2xl text-white font-serif">Show you care, change their world</h5>
                                 </div>
-                            </div>
+                            </div> */}
 
 
                         </div>

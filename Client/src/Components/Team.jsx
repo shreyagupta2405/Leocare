@@ -1,7 +1,8 @@
 import React from 'react'
 import img from "./images/team1.jpg";
 import img2 from './images/team2.png'
-import president from './images/president.jpeg'
+// import president from './images/president.jpeg'
+import president from './images/teamCEO.jpeg'
 import vicepresident from './images/vicepresident.jpeg'
 import { useState, useEffect } from 'react'
 
@@ -48,8 +49,8 @@ function Team() {
 
                         </h3> <br></br>
                         <h3 className='text-center text-gray-500 dark:text-gray-400'>
-                            President <br></br>
-                            Founder | CEO <br></br>
+                            Founder || President <br></br>
+                            Planning and Execution <br></br>
                         </h3>
                     </div>
                     
@@ -67,7 +68,7 @@ function Team() {
                         </h3> <br></br>
                         <h3 className='text-center text-gray-500 dark:text-gray-400'>
                             Vice President<br></br>
-                            Team Member <br></br>
+                            Implementation <br></br>
                         </h3>
                     </div>
                 </div>
