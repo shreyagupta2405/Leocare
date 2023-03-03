@@ -26,10 +26,6 @@ function Docs() {
 
     const validationSchema = yup.object().shape({
         content: yup.string().required(),
-        // email: yup.string().email('Invalid Email').required("Required Field"),
-       
-        // image: yup.mixed().required('File is required'),
-        //password: yup.string().required("Required Field").min(6)
     });
     const { register, handleSubmit, control, formState: { errors } } = useForm({
         resolver: yupResolver(validationSchema)
@@ -152,7 +148,6 @@ function Docs() {
                                     <p className='text-xl'>{data?.content}</p>
                                 </div>
                                 <div className='m-2'>
-                                <button className='rounded-lg mx-2 bg-gray text-white w-20 h-8'>Edit</button>
                                 <button className='rounded-lg mx-2 bg-red text-white w-20 h-8' onClick={(e) => deleteEvent(data?.id)}>Delete</button>
                                 </div>
                                 

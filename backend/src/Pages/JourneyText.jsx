@@ -125,7 +125,7 @@ function JourneyText() {
                                     <p className='text-xl'>{data?.content}</p>
                                 </div>
                                 <div className='m-2'>
-                                <button className='rounded-lg mx-2 bg-gray text-white w-20 h-8'>Edit</button>
+                                {/* <button className='rounded-lg mx-2 bg-gray text-white w-20 h-8'>Edit</button> */}
                                 <button className='rounded-lg mx-2 bg-red text-white w-20 h-8' onClick={(e) => deleteEvent(data?.id)}>Delete</button>
                                 </div>
                                 

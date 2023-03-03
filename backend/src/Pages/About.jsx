@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 import { useForm } from 'react-hook-form'
-import FormInputComponent from '../Components/FormInputComponent'
 import FormTextInput from '../Components/FormTextInput'
 import { auth, storage, db } from '../firebaseConfig'
 import { v4 } from 'uuid'
@@ -14,21 +13,22 @@ import {
     listAll,
     list,
 } from "firebase/storage";
-import { toast } from "react-toastify";
-import { toastArray } from '../Components/Toast'
-import docsService from '../api/docs.service'
 import aboutService from '../api/about.service'
 
 
 function About() {
     const [eventData, setEventData] = useState([]);
+    const [bookId, setBookId, reset] = useState("");
+    const [edit, setEdit] = useState(false);
+    const [editImage, setEditImage] = useState(null);
+    const [editId, setEditId] = useState(null);
 
     const validationSchema = yup.object().shape({
         about: yup.string(),
         mission:yup.string(),
         vision: yup.string()
     });
-    const { register, handleSubmit, control, formState: { errors } } = useForm({
+    const { register, handleSubmit, setValue, control, formState: { errors } } = useForm({
         resolver: yupResolver(validationSchema)
     });
     const addEventToStore = async (data, url) => {
@@ -40,9 +40,38 @@ function About() {
                     "vision": data?.vision
                 }
             );
+            getAllEventFromStore();
+            reset();
 
         } catch (err) {
             console.log(err);
+            setEditId(null);
+            setEdit(false);
+            reset();
+            setEditImage(null);
+        }
+    }
+    const updateEventToStore = async (data, url) => {
+        console.log("editId", data)
+
+        try {
+            await aboutService.updateEvent(
+                editId,
+                {
+                    "about": data?.about,
+                    "mission" : data?.mission,
+                    "vision": data?.vision
+                },
+            );
+            setEditId(null);
+            setEdit(false);
+            setEditImage(null);
+            reset();
+        } catch (err) {
+            console.log(err);
+            setEditId(null);
+            setEdit(false);
+            setEditImage(null);
         }
     }
     const onSubmit = async (data) => {
@@ -65,6 +94,12 @@ function About() {
         await aboutService.deleteEvents(id);
         getAllEventFromStore();
     }
+    const editHandler = async (id) => {
+        setEdit(true);
+        setEditId(id);
+        const docSnap = await aboutService.getEvent(id);
+        setValue('content', docSnap.data().content);
+    };
     useEffect(() => {
         getAllEventFromStore()
     }, [])
@@ -79,13 +114,7 @@ function About() {
                         <h2 class="text-center text-4xl text-indigo-900 font-display font-semibold lg:text-left xl:text-2xl
                     xl:text-bold ">About Section</h2>
                         <form id="hook-form" onSubmit={handleSubmit(onSubmit)}>
-                            {/* <input type="file" placeholder='upload pdf'
-                                className=' w-full border-2 bg-white rounded-lg p-2 mt-3'
-                                onChange={(event) => {
-                                    if (event.target.files[0]) {
-                                        setImage(event.target.files[0]);
-                                    }
-                                }} /> */}
+                            
                             
                             <FormTextInput
                                 label='About'
@@ -151,7 +180,7 @@ function About() {
                                     {data?.vision}</p>
                                 </div>
                                 <div className='m-2 pt-4'>
-                                <button className='rounded-lg mx-2 bg-gray text-white w-20 h-8'>Edit</button>
+                                {/* <button className='rounded-lg mx-2 bg-gray text-white w-20 h-8' onClick={() => { editHandler(data?.id) }}>Edit</button> */}
                                 <button className='rounded-lg mx-2 bg-red text-white w-20 h-8' onClick={(e) => deleteEvent(data?.id)}>Delete</button>
                                 </div>
                             </div>
