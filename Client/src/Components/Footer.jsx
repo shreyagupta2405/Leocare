@@ -17,7 +17,7 @@ import { IoMdContact } from 'react-icons/io'
 function Footer() {
     return (
         <footer id='footer' aria-label="Site Footer" class="bg-white">
-            <div className='bg-gray-500 text-white'>
+            <div className='bg-gray-600 text-white'>
                 
 
                 <div id='contactus' class=" mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-32">
