@@ -3,6 +3,7 @@ import img from "./images/team1.jpg";
 import img2 from './images/team2.png'
 // import president from './images/president.jpeg'
 import president from './images/teamCEO.jpeg'
+import vp from './images/team2vp.jpeg'
 import vicepresident from './images/vicepresident.jpeg'
 import { useState, useEffect } from 'react'
 
@@ -58,7 +59,7 @@ function Team() {
 
                 <div className='justify-center pt-6 '>
                     <div className='flex justify-center'>
-                        <img id='team' className=' w-36 h-36 rounded-full' src={vicepresident}></img>
+                        <img id='team' className=' w-36 h-36 rounded-full' src={vp}></img>
                     </div>
                     <div className='text-center font-extrabold' >
                         <h3 className='text-xl font-bold tracking-tight text-gray-900 dark:text-white'>

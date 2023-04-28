@@ -23,7 +23,7 @@ function Stats() {
           <div className=' text-lg md:text-2xl lg:text-4xl  text-white'>8 <br />Volunteers</div>
           <div className=' text-lg md:text-2xl lg:text-4xl  text-white'>100% <br />Success</div>
           <div className=' text-lg md:text-2xl lg:text-4xl  text-white'>150  <br />Helped</div>
-          <div className=' text-lg md:text-2xl lg:text-4xl  text-white'>100  <br />Donations</div>
+          <div className=' text-lg md:text-2xl lg:text-4xl  text-white'>10  <br />Donations</div>
 
         </div>
 
